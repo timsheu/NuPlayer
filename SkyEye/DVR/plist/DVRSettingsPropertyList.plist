@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Setup DVR</key>
+	<dict>
+		<key>Transmission</key>
+		<string>UDP</string>
+		<key>Device Info</key>
+		<dict>
+			<key>Available Storage</key>
+			<string></string>
+			<key>Recorder Status</key>
+			<string></string>
+		</dict>
+		<key>Serial</key>
+		<string>1</string>
+		<key>Name</key>
+		<string>ZY-NO-IP</string>
+		<key>URL</key>
+		<string>rtsp://nuvoton.no-ip.biz/cam1/mpeg4</string>
+		<key>Resolution</key>
+		<string>1</string>
+		<key>Encode Quality</key>
+		<string>1</string>
+		<key>Bit Rate</key>
+		<string>6000</string>
+		<key>FPS</key>
+		<string>30</string>
+		<key>Recording</key>
+		<string>0</string>
+		<key>File List</key>
+		<array/>
+		<key>History</key>
+		<array>
+			<string>rtsp://192.168.100.1/cam1/h264</string>
+			<string>rtsp://192.168.100.1/cam1/mpeg4</string>
+			<string>rtsp://nuvoton.no-ip.biz/cam1/h264</string>
+			<string>rtsp://nuvoton.no-ip.biz/cam1/mpeg4</string>
+			<string>-</string>
+		</array>
+	</dict>
+	<key>Device Information</key>
+	<dict>
+		<key>Available Storage</key>
+		<string>1</string>
+		<key>Recorder Status</key>
+		<string>1</string>
+	</dict>
+	<key>Device Mic</key>
+	<dict>
+		<key>Mute</key>
+		<string>ON</string>
+	</dict>
+	<key>Phone Mic</key>
+	<dict>
+		<key>Mute</key>
+		<string>ON</string>
+	</dict>
+	<key>Wi-Fi AP Setup</key>
+	<dict>
+		<key>SSID</key>
+		<string>ssid</string>
+		<key>password</key>
+		<string>password</string>
+	</dict>
+</dict>
+</plist>
