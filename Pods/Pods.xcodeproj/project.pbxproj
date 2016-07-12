@@ -8,133 +8,208 @@
 
 /* Begin PBXBuildFile section */
 		07190D985189066DC10EC0514CE9CA0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
-		08E236FAB3661AA63DEAC846DB2E7ED8 /* UIView+JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BC83059B8F4E70B841C2EFB07745D6A /* qrencode.h in Headers */ = {isa = PBXBuildFile; fileRef = 365155A2AEF182E32600B2278340F1B6 /* qrencode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		08E236FAB3661AA63DEAC846DB2E7ED8 /* UIView+JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 73BDBA9C6D36C1529D81C21A8D38D507 /* UIView+JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BC83059B8F4E70B841C2EFB07745D6A /* qrencode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FB3F677BC24AFAC7A14069510D963CC /* qrencode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0BFA9967D58C383EF11958FF58FE2542 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB95A2BFC4EEDECFF1AB2AAC161D4EB /* Security.framework */; };
-		11FE78B381486CDAEFC16305D051435C /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = 92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		18901D663C0DB7568D7D2D1BEC235F0A /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1BE05115600D3BDE5E104EF435A87368 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		296735F4CB61EE73818FF92448A10190 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		11FE78B381486CDAEFC16305D051435C /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = A45ECEE1E2718B0ED44CE09C17FF4D6F /* qrinput.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18901D663C0DB7568D7D2D1BEC235F0A /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E1242FCFA4B3CAC88EF7D01B0BF86B /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1BE05115600D3BDE5E104EF435A87368 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A79B91F06935F1BA6826BF1945CD19 /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E6A591B3DEE6317BB014BD71A50B689 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F3BB59A3B0B961CCB22F680AD8066414 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		296735F4CB61EE73818FF92448A10190 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 882B5B0282B8ED0A12B0767FD09FF20F /* QRCodeGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3348CBFB0E6BD6564B92D0458CD298E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
-		33D18B4DF750B48FD67AA803F9ED7629 /* JHChainableAnimations-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */; };
-		3685FE3E072299D69ED9FFD8C69FE19D /* QRCodeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4019EC63F971EC3E0632F0C0911DFA99 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		33D18B4DF750B48FD67AA803F9ED7629 /* JHChainableAnimations-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C09064EB97A20DE51050C926B01746 /* JHChainableAnimations-dummy.m */; };
+		3685FE3E072299D69ED9FFD8C69FE19D /* QRCodeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4708FD264CE8C1451A53CC43595B3BA6 /* QRCodeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDD0FB94D61AB71C8F5C727EC7A0BD9 /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 22FC793F5A74E637DECD87DC4970806C /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4019EC63F971EC3E0632F0C0911DFA99 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F71E3CA9E338F0241D936BF984959548 /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		41F221F9E8FDE456D3E9EB34B4C5EBF1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 580A51F780E8BDCCBC87B974676D9AD5 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		456BEEAD8F6C8D0B35D5A12E72068119 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B2277A14A407ABB636C82CC6B8A0D0 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CAAFD85FC04FBFFB61A22F14C8D4684 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E46718A022D52F10C561256A1EE7BB /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EFA149694181FD3E7EA7CC83F2060B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
-		52FFDE78FE7714F827583DBE414C14F2 /* rscode.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5680EA35619DAEB49C16F818180183F7 /* JHKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */; };
-		5BAAC793BEF27E084CD7DAE026BD452C /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5D6DC6D5B468CEBECCD3D16B970FD2B4 /* UIView+JHChainableAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */; };
-		5F6DF8A36479F63E2EAC487AC5A55869 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		68B7C557ACDCEC370A68FE1C574A191D /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7495B4B5FB217631EB480A136800AE1A /* bitstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7FCA10F62ED37C5F288AB90A2BFB7957 /* NSBKeyframeAnimationFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B73194CAE17AF3835E690D7FA02D35D /* JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DA12B78F51AAF5775092B9E47E88F5B /* Pods-SkyEye-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */; };
-		A7990BD59429797263F5B462384E8C1D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AA807E8B067BCAD683DD853CCC1C53C7 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B1D6444612DF75D29F8D625C3582A801 /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = 58BC858871781AB4BE68B0B411446653 /* split.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B89CCAB19F932745786F951C9D848DA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C54348CD0A0FE588BC8C8248775E4F10 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB17719967D3C50508BABE78D045F /* rscode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52FFDE78FE7714F827583DBE414C14F2 /* rscode.h in Headers */ = {isa = PBXBuildFile; fileRef = 381ADA5AD8C9917F307691B267E6672C /* rscode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5539A292EFC958D90F290DBA5FF86220 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5AE4ED8D65A4C1545340E4FBD86AAA /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5680EA35619DAEB49C16F818180183F7 /* JHKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 66661232786AB265E9B51B543F7CEBC4 /* JHKeyframeAnimation.m */; };
+		5BAAC793BEF27E084CD7DAE026BD452C /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = E5C37706F01238C08340DC45AA2611FD /* qrspec.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5D6DC6D5B468CEBECCD3D16B970FD2B4 /* UIView+JHChainableAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ECB882C593EFAF099E8F98C006E5D6 /* UIView+JHChainableAnimations.m */; };
+		5DCBA219BC81D9190F11EE56F93BB908 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E49A3D2B36E755E694FF93DDDD8F18E3 /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F6DF8A36479F63E2EAC487AC5A55869 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 7876DBB34239F00C5B5DD6F599366291 /* bitstream.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6077EFC05DC2551A7F5A1CFAC0B90187 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 230CFFBB5089E5B2DD3615F2D3217C6A /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6475050C8BA464772209BD6AF03F1EB1 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F96B625D297C6138FA9610C6E529B74 /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		656479029A5A15463E080FD25F8903B2 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A92E6464CB732ED65DACFDC0E017D2 /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		67E741D303696F9A1E863BC42E6A9C79 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B9F3275638CCEEAE990F507AFB1A6E /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68B7C557ACDCEC370A68FE1C574A191D /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E1F5E390DC9BA88D978D3ECCE79994 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DAEF151B35D00265D60C4AD34431DD9 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C769E8A2C44A80FF269EB7933C97D7 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7495B4B5FB217631EB480A136800AE1A /* bitstream.h in Headers */ = {isa = PBXBuildFile; fileRef = CB21886408E77AA9F68AD6AB973DCB05 /* bitstream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FCA10F62ED37C5F288AB90A2BFB7957 /* NSBKeyframeAnimationFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = C54BD422B07231EE02928BC6F8DD3080 /* NSBKeyframeAnimationFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73194CAE17AF3835E690D7FA02D35D /* JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0D287233B37FF1756B8AD701711D99 /* JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		906BA39B4449184A264475B0AAA9CD7B /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF70548F8CC8C77A8E503D8AD33A1AE /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9258A7B71D4C13DBFC66C4B8BE43B79A /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2430F8607D793D9A5189D25870909645 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DFB1378A337698012F7CE5D593DC04F /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = EB64D46A8BCF38D7417AEF8E648F45F2 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A2D0EE5602557677B5D9AB8D46F2F1AF /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 49724B7D08F779893D4397A5CC394ED1 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A34EF7C35E4E0657AFC8B4BA0B343867 /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C5334A143A87DB5F3394E22DD5C54 /* CocoaLumberjack-dummy.m */; };
+		A7990BD59429797263F5B462384E8C1D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE22485DAC1DA5E09435EF9B0871194 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA807E8B067BCAD683DD853CCC1C53C7 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = FE14C5D5253924DA81B83173F821D11E /* split.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AE6545072B660D87D58805341748446B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+		B1D6444612DF75D29F8D625C3582A801 /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = B0418B49C76B30149CD9EA5C0BAE64C9 /* split.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B89CCAB19F932745786F951C9D848DA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B2B8ABAB59965E64C32A2E2B54A7A3 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BBCA69A708A7B3DD861FB839B3A251B3 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C741913D0C2CA0FB203E68D14560A1F /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF525D162B9ABC5DFA69FB7A8779F76E /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE6E574E6B895BD45DBD0BD8A21936 /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C515A390D549AF8A16A76DD72388BD2C /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AB41071988605780D8F318B341C8E9A /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C54348CD0A0FE588BC8C8248775E4F10 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = A4BEE78F6C1FB5E3E76846707607D65D /* rscode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C5FCBA31319125D30AEBD33839F0A4D6 /* Pods-SkyEye-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */; };
+		C706C3F72D86ADDD74C37DEBF11256A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
 		CA7665A98EAF65C279B78C2B8D71F218 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9884A3E734A6C509FDA6B7178B78FB39 /* CFNetwork.framework */; };
-		CDCB2867FCA0BE756B7D169D95957895 /* qrinput.h in Headers */ = {isa = PBXBuildFile; fileRef = 631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D79B2A3554EA5484D94373D0B45E255C /* iOS-QR-Code-Encoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */; };
-		D8A5D517144551BA7DEB377C10445D99 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		DC613E61253547229724CAE9A924F40D /* NSBKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */; };
-		DC6CBDEDCDCBDAF59F0AFA4BA9480C0B /* JHKeyframeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC7EECFFFF44B58AC236D78E019C9725 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1B7972D916EC39DC39462C1D8B17223 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */; };
-		E427D53B45D91D0C2480D90F174A0E88 /* mask.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E7828069BC78E0DE49CAE53EF8270E66 /* JHChainableBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8722146B3B2EE06AE3C9E50F23DD885 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EA82EBA117844D5FC81378DA8CEC6B66 /* qrspec.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EDA0DF31A313200BC1AA65CA0ECA1D4A /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F01C647A1B1B75D7E619B7DCD77349B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+		CBB6BB497EC1A4C36506AD74ECDCD99F /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = DFFDFDFCCB8AE1FAD62F0801C4707D38 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDCB2867FCA0BE756B7D169D95957895 /* qrinput.h in Headers */ = {isa = PBXBuildFile; fileRef = FD13E99276EB4FCE5A14DD55A54E6515 /* qrinput.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D70BDFA09F4803DCFEAD7AF5DFE21C6A /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 681E7E802E992EAFD3E2F26BA2B70349 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D79B2A3554EA5484D94373D0B45E255C /* iOS-QR-Code-Encoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F15A8C350C09849A21849DB0D7DD3A /* iOS-QR-Code-Encoder-dummy.m */; };
+		D8A5D517144551BA7DEB377C10445D99 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BAB8F6363C2FCE3681226483DB06CF7 /* mask.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DC613E61253547229724CAE9A924F40D /* NSBKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = AB8CB9F13D921A5E4A739DB4E1BFDFFE /* NSBKeyframeAnimationFunctions.c */; };
+		DC6CBDEDCDCBDAF59F0AFA4BA9480C0B /* JHKeyframeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC94575FE52FAC436EC51F678A492EB7 /* JHKeyframeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC7EECFFFF44B58AC236D78E019C9725 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BA7DFD7FF5CB9AB5D84B532C09F92227 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B7972D916EC39DC39462C1D8B17223 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5920977AC82ECC2404342BAC58A57242 /* CocoaAsyncSocket-dummy.m */; };
+		E1ED34DB49C6A05D740B8425F88CEC20 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B86B2BCCCB4362FD51AEBC1E03D28334 /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E427D53B45D91D0C2480D90F174A0E88 /* mask.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF2ED15E7D793C0FECCB0961650DEE8 /* mask.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E7828069BC78E0DE49CAE53EF8270E66 /* JHChainableBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCA4D8DFE4D4C8A939507DFFE602CD7 /* JHChainableBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8722146B3B2EE06AE3C9E50F23DD885 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C10099DAAC78FC5C2596E34F996AC7D /* qrencode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA82EBA117844D5FC81378DA8CEC6B66 /* qrspec.h in Headers */ = {isa = PBXBuildFile; fileRef = 497C16C294E1FCC8B2720199C43F45F1 /* qrspec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EDA0DF31A313200BC1AA65CA0ECA1D4A /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 18EA113A3D97F09AECABE352D5C1CF4C /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6239BDE2049B920243DC0F907F57B9 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 47434871AE32F06C3FA3DAF64300E710 /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		924D79BB4424B4012C6ECC60EE5E05C7 /* PBXContainerItemProxy */ = {
+		356997C4C49D754DFA9C5F2363542871 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 45596EEF26239801B4852A0BF25FA724;
 			remoteInfo = "iOS-QR-Code-Encoder";
 		};
-		C0A101105B95E2F9CAEFD045FC24FACD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F27C9AB311EE00D38DCF3118AFEBA695;
-			remoteInfo = JHChainableAnimations;
-		};
-		F9336999E1BA2B1AA43DA5777E05F598 /* PBXContainerItemProxy */ = {
+		4FB872AFF68423A490F915B11DF412C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 48F687CDE9990BD471D7883061F7E5D4;
 			remoteInfo = CocoaAsyncSocket;
 		};
+		D1995D4F750FDBD4A6FE2B21DC91B72B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12E2BC28C62976C425F4B71C2723F0B1;
+			remoteInfo = CocoaLumberjack;
+		};
+		DF27D557979ED84C6C27699A71E2E87C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F27C9AB311EE00D38DCF3118AFEBA695;
+			remoteInfo = JHChainableAnimations;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
-		04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		04AAB17719967D3C50508BABE78D045F /* rscode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = rscode.c; path = libqrencode/rscode.c; sourceTree = "<group>"; };
-		06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeGenerator.m; path = Classes/QRCodeGenerator.m; sourceTree = "<group>"; };
+		020BCC763D6B50B8C00A387F1521C01B /* iOS-QR-Code-Encoder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-QR-Code-Encoder-prefix.pch"; sourceTree = "<group>"; };
 		0970F10F756F885A95B9005E14B54B39 /* Pods-SkyEye-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkyEye-frameworks.sh"; sourceTree = "<group>"; };
-		0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bitstream.c; path = libqrencode/bitstream.c; sourceTree = "<group>"; };
-		0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0ABE6E574E6B895BD45DBD0BD8A21936 /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
 		0C2B20CD08B4CCD875DCAE32D2289352 /* Pods-SkyEye-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkyEye-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0FBBDE7A51D0A115BC2663859CDF574D /* JHChainableAnimations-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHChainableAnimations-prefix.pch"; sourceTree = "<group>"; };
-		1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableAnimations.h; path = JHChainableAnimations/JHChainableAnimations.h; sourceTree = "<group>"; };
-		18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+JHChainableAnimations.h"; path = "JHChainableAnimations/UIView+JHChainableAnimations.h"; sourceTree = "<group>"; };
+		0CF2ED15E7D793C0FECCB0961650DEE8 /* mask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mask.h; path = libqrencode/mask.h; sourceTree = "<group>"; };
+		0DCF68919DE24A0EBF95617D86A48455 /* libJHChainableAnimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJHChainableAnimations.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		18EA113A3D97F09AECABE352D5C1CF4C /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		1AB41071988605780D8F318B341C8E9A /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
+		1C10099DAAC78FC5C2596E34F996AC7D /* qrencode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrencode.c; path = libqrencode/qrencode.c; sourceTree = "<group>"; };
 		1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkyEye-dummy.m"; sourceTree = "<group>"; };
+		22FC793F5A74E637DECD87DC4970806C /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		230CFFBB5089E5B2DD3615F2D3217C6A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		2430F8607D793D9A5189D25870909645 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		24DF44D6A0D5C20BF5504972A0FE2F67 /* Pods-SkyEye-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkyEye-resources.sh"; sourceTree = "<group>"; };
-		287071AA995C29F4C1A40F97C1E33C92 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		2EB95A2BFC4EEDECFF1AB2AAC161D4EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mask.h; path = libqrencode/mask.h; sourceTree = "<group>"; };
+		2FB3F677BC24AFAC7A14069510D963CC /* qrencode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrencode.h; path = libqrencode/qrencode.h; sourceTree = "<group>"; };
+		2FC0E417ECB2547A5C75E7838BFECD09 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkyEye.release.xcconfig"; sourceTree = "<group>"; };
-		365155A2AEF182E32600B2278340F1B6 /* qrencode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrencode.h; path = libqrencode/qrencode.h; sourceTree = "<group>"; };
-		398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableBlocks.h; path = JHChainableAnimations/JHChainableBlocks.h; sourceTree = "<group>"; };
-		3A42BB6E33B7C0C625822138088B00B2 /* iOS-QR-Code-Encoder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-QR-Code-Encoder-prefix.pch"; sourceTree = "<group>"; };
-		4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJHChainableAnimations.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+JHChainableAnimations.m"; path = "JHChainableAnimations/UIView+JHChainableAnimations.m"; sourceTree = "<group>"; };
-		5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
-		54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
-		58BC858871781AB4BE68B0B411446653 /* split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = split.h; path = libqrencode/split.h; sourceTree = "<group>"; };
-		5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
-		5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JHKeyframeAnimation.m; path = JHChainableAnimations/JHKeyframeAnimation.m; sourceTree = "<group>"; };
-		60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = split.c; path = libqrencode/split.c; sourceTree = "<group>"; };
-		631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrinput.h; path = libqrencode/qrinput.h; sourceTree = "<group>"; };
-		671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = NSBKeyframeAnimationFunctions.c; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.c; sourceTree = "<group>"; };
-		68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-QR-Code-Encoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSBKeyframeAnimationFunctions.h; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
-		6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bitstream.h; path = libqrencode/bitstream.h; sourceTree = "<group>"; };
-		7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHChainableAnimations.xcconfig; sourceTree = "<group>"; };
-		8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrencode.c; path = libqrencode/qrencode.c; sourceTree = "<group>"; };
-		8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JHChainableAnimations-dummy.m"; sourceTree = "<group>"; };
-		92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrinput.c; path = libqrencode/qrinput.c; sourceTree = "<group>"; };
+		37E46718A022D52F10C561256A1EE7BB /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		381ADA5AD8C9917F307691B267E6672C /* rscode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rscode.h; path = libqrencode/rscode.h; sourceTree = "<group>"; };
+		3CE3ADFFC0935F84DBA453F5E8F33374 /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
+		4708FD264CE8C1451A53CC43595B3BA6 /* QRCodeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeGenerator.h; path = Classes/QRCodeGenerator.h; sourceTree = "<group>"; };
+		47434871AE32F06C3FA3DAF64300E710 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		49724B7D08F779893D4397A5CC394ED1 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		497C16C294E1FCC8B2720199C43F45F1 /* qrspec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrspec.h; path = libqrencode/qrspec.h; sourceTree = "<group>"; };
+		49B2277A14A407ABB636C82CC6B8A0D0 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
+		4AE22485DAC1DA5E09435EF9B0871194 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		51E1F5E390DC9BA88D978D3ECCE79994 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		5558985420BBD1CD2B566B073C4DA6F6 /* iOS-QR-Code-Encoder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-QR-Code-Encoder.xcconfig"; sourceTree = "<group>"; };
+		580A51F780E8BDCCBC87B974676D9AD5 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
+		5920977AC82ECC2404342BAC58A57242 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		5F96B625D297C6138FA9610C6E529B74 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
+		5FF70548F8CC8C77A8E503D8AD33A1AE /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		6337EA06E9FA12035C5B276FAC6A759B /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66661232786AB265E9B51B543F7CEBC4 /* JHKeyframeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JHKeyframeAnimation.m; path = JHChainableAnimations/JHKeyframeAnimation.m; sourceTree = "<group>"; };
+		681E7E802E992EAFD3E2F26BA2B70349 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
+		69A92E6464CB732ED65DACFDC0E017D2 /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
+		6C741913D0C2CA0FB203E68D14560A1F /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
+		73BDBA9C6D36C1529D81C21A8D38D507 /* UIView+JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+JHChainableAnimations.h"; path = "JHChainableAnimations/UIView+JHChainableAnimations.h"; sourceTree = "<group>"; };
+		75ECB882C593EFAF099E8F98C006E5D6 /* UIView+JHChainableAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+JHChainableAnimations.m"; path = "JHChainableAnimations/UIView+JHChainableAnimations.m"; sourceTree = "<group>"; };
+		76E1242FCFA4B3CAC88EF7D01B0BF86B /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		77B2B8ABAB59965E64C32A2E2B54A7A3 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		77B9F3275638CCEEAE990F507AFB1A6E /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
+		7876DBB34239F00C5B5DD6F599366291 /* bitstream.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bitstream.c; path = libqrencode/bitstream.c; sourceTree = "<group>"; };
+		7B0D287233B37FF1756B8AD701711D99 /* JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableAnimations.h; path = JHChainableAnimations/JHChainableAnimations.h; sourceTree = "<group>"; };
+		7DCA4D8DFE4D4C8A939507DFFE602CD7 /* JHChainableBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableBlocks.h; path = JHChainableAnimations/JHChainableBlocks.h; sourceTree = "<group>"; };
+		882B5B0282B8ED0A12B0767FD09FF20F /* QRCodeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeGenerator.m; path = Classes/QRCodeGenerator.m; sourceTree = "<group>"; };
+		89C769E8A2C44A80FF269EB7933C97D7 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		8EA3246988E5690EE83D58B9F4073BFB /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5AE4ED8D65A4C1545340E4FBD86AAA /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A5E31F5B53276744A749AED49C16CF /* libiOS-QR-Code-Encoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-QR-Code-Encoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9884A3E734A6C509FDA6B7178B78FB39 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		9BAB8F6363C2FCE3681226483DB06CF7 /* mask.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mask.c; path = libqrencode/mask.c; sourceTree = "<group>"; };
+		A22B55C0D17F4D12C9AC756E2C4A0B10 /* JHChainableAnimations.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHChainableAnimations.xcconfig; sourceTree = "<group>"; };
+		A2F15A8C350C09849A21849DB0D7DD3A /* iOS-QR-Code-Encoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-QR-Code-Encoder-dummy.m"; sourceTree = "<group>"; };
+		A45ECEE1E2718B0ED44CE09C17FF4D6F /* qrinput.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrinput.c; path = libqrencode/qrinput.c; sourceTree = "<group>"; };
+		A4BEE78F6C1FB5E3E76846707607D65D /* rscode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = rscode.c; path = libqrencode/rscode.c; sourceTree = "<group>"; };
 		A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A94DC6333663187E0762085910425977 /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
+		AB8CB9F13D921A5E4A739DB4E1BFDFFE /* NSBKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = NSBKeyframeAnimationFunctions.c; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.c; sourceTree = "<group>"; };
 		B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
-		BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrspec.c; path = libqrencode/qrspec.c; sourceTree = "<group>"; };
-		BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-QR-Code-Encoder.xcconfig"; sourceTree = "<group>"; };
-		C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rscode.h; path = libqrencode/rscode.h; sourceTree = "<group>"; };
-		CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrspec.h; path = libqrencode/qrspec.h; sourceTree = "<group>"; };
-		CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-QR-Code-Encoder-dummy.m"; sourceTree = "<group>"; };
-		D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
-		ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeGenerator.h; path = Classes/QRCodeGenerator.h; sourceTree = "<group>"; };
-		F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHKeyframeAnimation.h; path = JHChainableAnimations/JHKeyframeAnimation.h; sourceTree = "<group>"; };
-		FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mask.c; path = libqrencode/mask.c; sourceTree = "<group>"; };
+		B03F4DE7220B3BE677C44DB074F4540B /* JHChainableAnimations-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHChainableAnimations-prefix.pch"; sourceTree = "<group>"; };
+		B0418B49C76B30149CD9EA5C0BAE64C9 /* split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = split.h; path = libqrencode/split.h; sourceTree = "<group>"; };
+		B86B2BCCCB4362FD51AEBC1E03D28334 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
+		B9C09064EB97A20DE51050C926B01746 /* JHChainableAnimations-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JHChainableAnimations-dummy.m"; sourceTree = "<group>"; };
+		BA7DFD7FF5CB9AB5D84B532C09F92227 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		BC94575FE52FAC436EC51F678A492EB7 /* JHKeyframeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHKeyframeAnimation.h; path = JHChainableAnimations/JHKeyframeAnimation.h; sourceTree = "<group>"; };
+		C54BD422B07231EE02928BC6F8DD3080 /* NSBKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSBKeyframeAnimationFunctions.h; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
+		CB21886408E77AA9F68AD6AB973DCB05 /* bitstream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bitstream.h; path = libqrencode/bitstream.h; sourceTree = "<group>"; };
+		CD5C5334A143A87DB5F3394E22DD5C54 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		DB6E0895D3591C8712D47A6FDC4558BE /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFDFDFCCB8AE1FAD62F0801C4707D38 /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
+		E49A3D2B36E755E694FF93DDDD8F18E3 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
+		E5C37706F01238C08340DC45AA2611FD /* qrspec.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrspec.c; path = libqrencode/qrspec.c; sourceTree = "<group>"; };
+		EB64D46A8BCF38D7417AEF8E648F45F2 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
+		F0A79B91F06935F1BA6826BF1945CD19 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		F3BB59A3B0B961CCB22F680AD8066414 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
+		F646D3B0E9DA9C57605EFFAE2DF5289F /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		F71E3CA9E338F0241D936BF984959548 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
 		FBB15D9152BC19966C5D1CE6A4C73906 /* Pods-SkyEye-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkyEye-acknowledgements.plist"; sourceTree = "<group>"; };
+		FD13E99276EB4FCE5A14DD55A54E6515 /* qrinput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrinput.h; path = libqrencode/qrinput.h; sourceTree = "<group>"; };
+		FE14C5D5253924DA81B83173F821D11E /* split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = split.c; path = libqrencode/split.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		05BCD33A93C626516F479F56D2116E49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6545072B660D87D58805341748446B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47EF51B6BCC124D62D4EB7FFAA1196B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C706C3F72D86ADDD74C37DEBF11256A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95B8EED6BAD122B29D3F6C06152F58A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,14 +226,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7A19B4E60C68A64462132F3C06AF8F8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F01C647A1B1B75D7E619B7DCD77349B2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA61A4D598C2FCF00934A59C326F7DAC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,16 +239,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AC7F508524843D11E0BC978DDDED02C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2B221F605588DA80961413014A8230CF /* CocoaAsyncSocket */,
-				A827B6AAD23EFB60C1E43561ECCB766E /* iOS-QR-Code-Encoder */,
-				DB5E9937F11ED9A2389FE972A564F15E /* JHChainableAnimations */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +262,22 @@
 			path = "Target Support Files/Pods-SkyEye";
 			sourceTree = "<group>";
 		};
+		1B30763777BD20A446708EE0CDCED2D2 /* JHChainableAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				7B0D287233B37FF1756B8AD701711D99 /* JHChainableAnimations.h */,
+				7DCA4D8DFE4D4C8A939507DFFE602CD7 /* JHChainableBlocks.h */,
+				BC94575FE52FAC436EC51F678A492EB7 /* JHKeyframeAnimation.h */,
+				66661232786AB265E9B51B543F7CEBC4 /* JHKeyframeAnimation.m */,
+				AB8CB9F13D921A5E4A739DB4E1BFDFFE /* NSBKeyframeAnimationFunctions.c */,
+				C54BD422B07231EE02928BC6F8DD3080 /* NSBKeyframeAnimationFunctions.h */,
+				73BDBA9C6D36C1529D81C21A8D38D507 /* UIView+JHChainableAnimations.h */,
+				75ECB882C593EFAF099E8F98C006E5D6 /* UIView+JHChainableAnimations.m */,
+				B898CA3F3FE6B38227394C0577953CCE /* Support Files */,
+			);
+			path = JHChainableAnimations;
+			sourceTree = "<group>";
+		};
 		2A0EB8F1FB4047E0D8C3829ADEA60200 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,34 +286,60 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2B221F605588DA80961413014A8230CF /* CocoaAsyncSocket */ = {
+		2A90C8FE6365C463C2DFBB666BCE2184 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F64D76853EF61C13CE493EFA04BE993 /* GCD */,
-				697B88DA91CCC1307E53C0015367815B /* RunLoop */,
-				8A258EAFBA20EB10622A149528D15938 /* Support Files */,
+				AB283BF78D6C03535F08BF03BA157AA2 /* CocoaAsyncSocket */,
+				9E358031B0763A4007476DDD6C4A6838 /* CocoaLumberjack */,
+				94C1AA6CC77B3355F7471ED82F5111BF /* iOS-QR-Code-Encoder */,
+				1B30763777BD20A446708EE0CDCED2D2 /* JHChainableAnimations */,
 			);
-			path = CocoaAsyncSocket;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		4F64D76853EF61C13CE493EFA04BE993 /* GCD */ = {
+		36ABEED80270B8FD82FB0BF76B90F79D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */,
-				0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */,
-				04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */,
-				7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */,
+				37E46718A022D52F10C561256A1EE7BB /* DDContextFilterLogFormatter.h */,
+				89C769E8A2C44A80FF269EB7933C97D7 /* DDContextFilterLogFormatter.m */,
+				8F5AE4ED8D65A4C1545340E4FBD86AAA /* DDDispatchQueueLogFormatter.h */,
+				47434871AE32F06C3FA3DAF64300E710 /* DDDispatchQueueLogFormatter.m */,
+				5F96B625D297C6138FA9610C6E529B74 /* DDMultiFormatter.h */,
+				B86B2BCCCB4362FD51AEBC1E03D28334 /* DDMultiFormatter.m */,
 			);
-			name = GCD;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
-		697B88DA91CCC1307E53C0015367815B /* RunLoop */ = {
+		38E6DFAE01298B835716C8FE1DD6FEB2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */,
-				00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */,
-				54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */,
-				5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */,
+				2430F8607D793D9A5189D25870909645 /* DDAbstractDatabaseLogger.h */,
+				230CFFBB5089E5B2DD3615F2D3217C6A /* DDAbstractDatabaseLogger.m */,
+				F3BB59A3B0B961CCB22F680AD8066414 /* DDASLLogCapture.h */,
+				EB64D46A8BCF38D7417AEF8E648F45F2 /* DDASLLogCapture.m */,
+				77B9F3275638CCEEAE990F507AFB1A6E /* DDASLLogger.h */,
+				69A92E6464CB732ED65DACFDC0E017D2 /* DDASLLogger.m */,
+				5FF70548F8CC8C77A8E503D8AD33A1AE /* DDAssertMacros.h */,
+				1AB41071988605780D8F318B341C8E9A /* DDFileLogger.h */,
+				580A51F780E8BDCCBC87B974676D9AD5 /* DDFileLogger.m */,
+				6C741913D0C2CA0FB203E68D14560A1F /* DDLegacyMacros.h */,
+				49B2277A14A407ABB636C82CC6B8A0D0 /* DDLog.h */,
+				681E7E802E992EAFD3E2F26BA2B70349 /* DDLog.m */,
+				49724B7D08F779893D4397A5CC394ED1 /* DDLog+LOGV.h */,
+				22FC793F5A74E637DECD87DC4970806C /* DDLogMacros.h */,
+				E49A3D2B36E755E694FF93DDDD8F18E3 /* DDTTYLogger.h */,
+				0ABE6E574E6B895BD45DBD0BD8A21936 /* DDTTYLogger.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		53B5B1B80562ABBA3FEC98988518266C /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				18EA113A3D97F09AECABE352D5C1CF4C /* AsyncSocket.h */,
+				76E1242FCFA4B3CAC88EF7D01B0BF86B /* AsyncSocket.m */,
+				F0A79B91F06935F1BA6826BF1945CD19 /* AsyncUdpSocket.h */,
+				F71E3CA9E338F0241D936BF984959548 /* AsyncUdpSocket.m */,
 			);
 			name = RunLoop;
 			sourceTree = "<group>";
@@ -260,94 +359,130 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				0AC7F508524843D11E0BC978DDDED02C /* Pods */,
-				7FB902E16A8DD5B8569ECDC700E5809B /* Products */,
+				2A90C8FE6365C463C2DFBB666BCE2184 /* Pods */,
+				BBB64F559DE5602B4C68765450C6C1DE /* Products */,
 				2A0EB8F1FB4047E0D8C3829ADEA60200 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7FB902E16A8DD5B8569ECDC700E5809B /* Products */ = {
+		8C264572F82D61A8F48CF79FB86638ED /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */,
-				68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */,
-				4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */,
-				6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8A258EAFBA20EB10622A149528D15938 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */,
-				D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */,
-				287071AA995C29F4C1A40F97C1E33C92 /* CocoaAsyncSocket-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CocoaAsyncSocket";
-			sourceTree = "<group>";
-		};
-		A827B6AAD23EFB60C1E43561ECCB766E /* iOS-QR-Code-Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */,
-				73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */,
-				FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */,
-				32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */,
-				ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */,
-				06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */,
-				8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */,
-				365155A2AEF182E32600B2278340F1B6 /* qrencode.h */,
-				92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */,
-				631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */,
-				BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */,
-				CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */,
-				04AAB17719967D3C50508BABE78D045F /* rscode.c */,
-				C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */,
-				60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */,
-				58BC858871781AB4BE68B0B411446653 /* split.h */,
-				BC3E3597BAAD85588D27F014CD581AE3 /* Support Files */,
-			);
-			path = "iOS-QR-Code-Encoder";
-			sourceTree = "<group>";
-		};
-		BC3E3597BAAD85588D27F014CD581AE3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */,
-				CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */,
-				3A42BB6E33B7C0C625822138088B00B2 /* iOS-QR-Code-Encoder-prefix.pch */,
+				5558985420BBD1CD2B566B073C4DA6F6 /* iOS-QR-Code-Encoder.xcconfig */,
+				A2F15A8C350C09849A21849DB0D7DD3A /* iOS-QR-Code-Encoder-dummy.m */,
+				020BCC763D6B50B8C00A387F1521C01B /* iOS-QR-Code-Encoder-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/iOS-QR-Code-Encoder";
 			sourceTree = "<group>";
 		};
-		DB5E9937F11ED9A2389FE972A564F15E /* JHChainableAnimations */ = {
+		94C1AA6CC77B3355F7471ED82F5111BF /* iOS-QR-Code-Encoder */ = {
 			isa = PBXGroup;
 			children = (
-				1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */,
-				398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */,
-				F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */,
-				5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */,
-				671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */,
-				698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */,
-				18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */,
-				46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */,
-				EB201B8DF3832490B90BDB138553C29D /* Support Files */,
+				7876DBB34239F00C5B5DD6F599366291 /* bitstream.c */,
+				CB21886408E77AA9F68AD6AB973DCB05 /* bitstream.h */,
+				9BAB8F6363C2FCE3681226483DB06CF7 /* mask.c */,
+				0CF2ED15E7D793C0FECCB0961650DEE8 /* mask.h */,
+				4708FD264CE8C1451A53CC43595B3BA6 /* QRCodeGenerator.h */,
+				882B5B0282B8ED0A12B0767FD09FF20F /* QRCodeGenerator.m */,
+				1C10099DAAC78FC5C2596E34F996AC7D /* qrencode.c */,
+				2FB3F677BC24AFAC7A14069510D963CC /* qrencode.h */,
+				A45ECEE1E2718B0ED44CE09C17FF4D6F /* qrinput.c */,
+				FD13E99276EB4FCE5A14DD55A54E6515 /* qrinput.h */,
+				E5C37706F01238C08340DC45AA2611FD /* qrspec.c */,
+				497C16C294E1FCC8B2720199C43F45F1 /* qrspec.h */,
+				A4BEE78F6C1FB5E3E76846707607D65D /* rscode.c */,
+				381ADA5AD8C9917F307691B267E6672C /* rscode.h */,
+				FE14C5D5253924DA81B83173F821D11E /* split.c */,
+				B0418B49C76B30149CD9EA5C0BAE64C9 /* split.h */,
+				8C264572F82D61A8F48CF79FB86638ED /* Support Files */,
 			);
-			path = JHChainableAnimations;
+			path = "iOS-QR-Code-Encoder";
 			sourceTree = "<group>";
 		};
-		EB201B8DF3832490B90BDB138553C29D /* Support Files */ = {
+		9BF9FA0725DB119FB8CD75A5A52BBF14 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */,
-				8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */,
-				0FBBDE7A51D0A115BC2663859CDF574D /* JHChainableAnimations-prefix.pch */,
+				3CE3ADFFC0935F84DBA453F5E8F33374 /* CocoaAsyncSocket.xcconfig */,
+				5920977AC82ECC2404342BAC58A57242 /* CocoaAsyncSocket-dummy.m */,
+				2FC0E417ECB2547A5C75E7838BFECD09 /* CocoaAsyncSocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		9E358031B0763A4007476DDD6C4A6838 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				38E6DFAE01298B835716C8FE1DD6FEB2 /* Core */,
+				A022B97A383C41D5D5B16C7B043A9FFA /* Default */,
+				36ABEED80270B8FD82FB0BF76B90F79D /* Extensions */,
+				D4437952D3A7CB220E65F48256C39C54 /* Support Files */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		A022B97A383C41D5D5B16C7B043A9FFA /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				DFFDFDFCCB8AE1FAD62F0801C4707D38 /* CocoaLumberjack.h */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		AB283BF78D6C03535F08BF03BA157AA2 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C9D24DE9B9F3EF57DE134E7F74493 /* GCD */,
+				53B5B1B80562ABBA3FEC98988518266C /* RunLoop */,
+				9BF9FA0725DB119FB8CD75A5A52BBF14 /* Support Files */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		B898CA3F3FE6B38227394C0577953CCE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A22B55C0D17F4D12C9AC756E2C4A0B10 /* JHChainableAnimations.xcconfig */,
+				B9C09064EB97A20DE51050C926B01746 /* JHChainableAnimations-dummy.m */,
+				B03F4DE7220B3BE677C44DB074F4540B /* JHChainableAnimations-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JHChainableAnimations";
+			sourceTree = "<group>";
+		};
+		BBB64F559DE5602B4C68765450C6C1DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6337EA06E9FA12035C5B276FAC6A759B /* libCocoaAsyncSocket.a */,
+				DB6E0895D3591C8712D47A6FDC4558BE /* libCocoaLumberjack.a */,
+				93A5E31F5B53276744A749AED49C16CF /* libiOS-QR-Code-Encoder.a */,
+				0DCF68919DE24A0EBF95617D86A48455 /* libJHChainableAnimations.a */,
+				8EA3246988E5690EE83D58B9F4073BFB /* libPods-SkyEye.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4437952D3A7CB220E65F48256C39C54 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A94DC6333663187E0762085910425977 /* CocoaLumberjack.xcconfig */,
+				CD5C5334A143A87DB5F3394E22DD5C54 /* CocoaLumberjack-dummy.m */,
+				F646D3B0E9DA9C57605EFFAE2DF5289F /* CocoaLumberjack-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaLumberjack";
+			sourceTree = "<group>";
+		};
+		EB7C9D24DE9B9F3EF57DE134E7F74493 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				51E1F5E390DC9BA88D978D3ECCE79994 /* GCDAsyncSocket.h */,
+				4AE22485DAC1DA5E09435EF9B0871194 /* GCDAsyncSocket.m */,
+				BA7DFD7FF5CB9AB5D84B532C09F92227 /* GCDAsyncUdpSocket.h */,
+				77B2B8ABAB59965E64C32A2E2B54A7A3 /* GCDAsyncUdpSocket.m */,
+			);
+			name = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +515,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D1929340700AE302905262BB6EE9651 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBB6BB497EC1A4C36506AD74ECDCD99F /* CocoaLumberjack.h in Headers */,
+				9258A7B71D4C13DBFC66C4B8BE43B79A /* DDAbstractDatabaseLogger.h in Headers */,
+				1E6A591B3DEE6317BB014BD71A50B689 /* DDASLLogCapture.h in Headers */,
+				67E741D303696F9A1E863BC42E6A9C79 /* DDASLLogger.h in Headers */,
+				906BA39B4449184A264475B0AAA9CD7B /* DDAssertMacros.h in Headers */,
+				4CAAFD85FC04FBFFB61A22F14C8D4684 /* DDContextFilterLogFormatter.h in Headers */,
+				5539A292EFC958D90F290DBA5FF86220 /* DDDispatchQueueLogFormatter.h in Headers */,
+				C515A390D549AF8A16A76DD72388BD2C /* DDFileLogger.h in Headers */,
+				BBCA69A708A7B3DD861FB839B3A251B3 /* DDLegacyMacros.h in Headers */,
+				A2D0EE5602557677B5D9AB8D46F2F1AF /* DDLog+LOGV.h in Headers */,
+				456BEEAD8F6C8D0B35D5A12E72068119 /* DDLog.h in Headers */,
+				3DDD0FB94D61AB71C8F5C727EC7A0BD9 /* DDLogMacros.h in Headers */,
+				6475050C8BA464772209BD6AF03F1EB1 /* DDMultiFormatter.h in Headers */,
+				5DCBA219BC81D9190F11EE56F93BB908 /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		726A71FBB14447C7F1215523A376F792 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,6 +550,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		12E2BC28C62976C425F4B71C2723F0B1 /* CocoaLumberjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0C8BB684C9CCC379207FFA69ED0D571 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */;
+			buildPhases = (
+				896BFDD81CD617BCCE12E7FCD204E6D7 /* Sources */,
+				05BCD33A93C626516F479F56D2116E49 /* Frameworks */,
+				3D1929340700AE302905262BB6EE9651 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaLumberjack;
+			productName = CocoaLumberjack;
+			productReference = DB6E0895D3591C8712D47A6FDC4558BE /* libCocoaLumberjack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		17C34320B8C01C134D5DB46668F41652 /* Pods-SkyEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF91E049783ED34A211EB68CD2A026EE /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */;
+			buildPhases = (
+				C7BBAEDAC1D1E9A6718338097490C55C /* Sources */,
+				47EF51B6BCC124D62D4EB7FFAA1196B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44705142D76CAE7A40CA5AA003A000ED /* PBXTargetDependency */,
+				C60D48BA858C8B886E85D292809AD1B1 /* PBXTargetDependency */,
+				764A7497A603EE9CD504DBB88EA61601 /* PBXTargetDependency */,
+				19507F41C4DBB53D2FF693DCB6F0C8E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-SkyEye";
+			productName = "Pods-SkyEye";
+			productReference = 8EA3246988E5690EE83D58B9F4073BFB /* libPods-SkyEye.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF8EB65916FB044DE9C7AB9AB8ABA227 /* Build configuration list for PBXNativeTarget "iOS-QR-Code-Encoder" */;
@@ -408,7 +601,7 @@
 			);
 			name = "iOS-QR-Code-Encoder";
 			productName = "iOS-QR-Code-Encoder";
-			productReference = 68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */;
+			productReference = 93A5E31F5B53276744A749AED49C16CF /* libiOS-QR-Code-Encoder.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */ = {
@@ -425,26 +618,7 @@
 			);
 			name = CocoaAsyncSocket;
 			productName = CocoaAsyncSocket;
-			productReference = C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D14CE8B1670F74F6608A159DB1399AEB /* Pods-SkyEye */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AEF9F994FDF88FB63DB744F3817FFBA1 /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */;
-			buildPhases = (
-				05AA8DA2F1785DDD539D3E75CF4E81E7 /* Sources */,
-				A7A19B4E60C68A64462132F3C06AF8F8 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65454E8119E79BC73B0C3BD250388AE1 /* PBXTargetDependency */,
-				CDB720AB1997166FF2CAB57C057B531E /* PBXTargetDependency */,
-				FFCC3C96E9FC62345F8556C665D3BAA9 /* PBXTargetDependency */,
-			);
-			name = "Pods-SkyEye";
-			productName = "Pods-SkyEye";
-			productReference = 6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */;
+			productReference = 6337EA06E9FA12035C5B276FAC6A759B /* libCocoaAsyncSocket.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */ = {
@@ -461,7 +635,7 @@
 			);
 			name = JHChainableAnimations;
 			productName = JHChainableAnimations;
-			productReference = 4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */;
+			productReference = 0DCF68919DE24A0EBF95617D86A48455 /* libJHChainableAnimations.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -481,27 +655,20 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7FB902E16A8DD5B8569ECDC700E5809B /* Products */;
+			productRefGroup = BBB64F559DE5602B4C68765450C6C1DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */,
+				12E2BC28C62976C425F4B71C2723F0B1 /* CocoaLumberjack */,
 				45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */,
 				F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */,
-				D14CE8B1670F74F6608A159DB1399AEB /* Pods-SkyEye */,
+				17C34320B8C01C134D5DB46668F41652 /* Pods-SkyEye */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05AA8DA2F1785DDD539D3E75CF4E81E7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DA12B78F51AAF5775092B9E47E88F5B /* Pods-SkyEye-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1AAD49792CE16288963C8FA82C8068BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,6 +697,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		896BFDD81CD617BCCE12E7FCD204E6D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34EF7C35E4E0657AFC8B4BA0B343867 /* CocoaLumberjack-dummy.m in Sources */,
+				6077EFC05DC2551A7F5A1CFAC0B90187 /* DDAbstractDatabaseLogger.m in Sources */,
+				9DFB1378A337698012F7CE5D593DC04F /* DDASLLogCapture.m in Sources */,
+				656479029A5A15463E080FD25F8903B2 /* DDASLLogger.m in Sources */,
+				6DAEF151B35D00265D60C4AD34431DD9 /* DDContextFilterLogFormatter.m in Sources */,
+				FE6239BDE2049B920243DC0F907F57B9 /* DDDispatchQueueLogFormatter.m in Sources */,
+				41F221F9E8FDE456D3E9EB34B4C5EBF1 /* DDFileLogger.m in Sources */,
+				D70BDFA09F4803DCFEAD7AF5DFE21C6A /* DDLog.m in Sources */,
+				E1ED34DB49C6A05D740B8425F88CEC20 /* DDMultiFormatter.m in Sources */,
+				BF525D162B9ABC5DFA69FB7A8779F76E /* DDTTYLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7BBAEDAC1D1E9A6718338097490C55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5FCBA31319125D30AEBD33839F0A4D6 /* Pods-SkyEye-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC1148C175E4898546ED513F9A3CAA49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,30 +736,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		65454E8119E79BC73B0C3BD250388AE1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */;
-			targetProxy = F9336999E1BA2B1AA43DA5777E05F598 /* PBXContainerItemProxy */;
-		};
-		CDB720AB1997166FF2CAB57C057B531E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JHChainableAnimations;
-			target = F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */;
-			targetProxy = C0A101105B95E2F9CAEFD045FC24FACD /* PBXContainerItemProxy */;
-		};
-		FFCC3C96E9FC62345F8556C665D3BAA9 /* PBXTargetDependency */ = {
+		19507F41C4DBB53D2FF693DCB6F0C8E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "iOS-QR-Code-Encoder";
 			target = 45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */;
-			targetProxy = 924D79BB4424B4012C6ECC60EE5E05C7 /* PBXContainerItemProxy */;
+			targetProxy = 356997C4C49D754DFA9C5F2363542871 /* PBXContainerItemProxy */;
+		};
+		44705142D76CAE7A40CA5AA003A000ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */;
+			targetProxy = 4FB872AFF68423A490F915B11DF412C5 /* PBXContainerItemProxy */;
+		};
+		764A7497A603EE9CD504DBB88EA61601 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JHChainableAnimations;
+			target = F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */;
+			targetProxy = DF27D557979ED84C6C27699A71E2E87C /* PBXContainerItemProxy */;
+		};
+		C60D48BA858C8B886E85D292809AD1B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaLumberjack;
+			target = 12E2BC28C62976C425F4B71C2723F0B1 /* CocoaLumberjack */;
+			targetProxy = D1995D4F750FDBD4A6FE2B21DC91B72B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11035AB40AAC29D5899704C622C0D59D /* Release */ = {
+		1F372050C0620074D97BB57D7710EEBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */;
+			baseConfigurationReference = B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -575,12 +773,12 @@
 					arm64,
 				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -590,7 +788,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		2C442C92732ADBDBFA54CF4EA7B71CDF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -629,9 +827,36 @@
 			};
 			name = Release;
 		};
+		2F528EEAB9ADA4B420F8F2DD5E5B7106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94DC6333663187E0762085910425977 /* CocoaLumberjack.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		50A6818E6BE5E8938F83CF20409E7E46 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = 3CE3ADFFC0935F84DBA453F5E8F33374 /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -658,7 +883,7 @@
 		};
 		7466178B8588AAA87F70F8439F71F371 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */;
+			baseConfigurationReference = 5558985420BBD1CD2B566B073C4DA6F6 /* iOS-QR-Code-Encoder.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -685,7 +910,7 @@
 		};
 		85320092DB4024BA5D20613D069555E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = 3CE3ADFFC0935F84DBA453F5E8F33374 /* CocoaAsyncSocket.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -712,7 +937,7 @@
 		};
 		97C86E143A7AE7752414E75D5D2216B8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */;
+			baseConfigurationReference = A22B55C0D17F4D12C9AC756E2C4A0B10 /* JHChainableAnimations.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -737,36 +962,9 @@
 			};
 			name = Release;
 		};
-		A2E9A188B7CB3432FC5D1F4A862280F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = (
-					armv7,
-					armv7s,
-					arm64,
-				);
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		C53CE9CC8C277164FF987E256B3904C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */;
+			baseConfigurationReference = 5558985420BBD1CD2B566B073C4DA6F6 /* iOS-QR-Code-Encoder.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -793,7 +991,7 @@
 		};
 		C951E0637D6CECA1A59545C0E0C35217 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */;
+			baseConfigurationReference = A22B55C0D17F4D12C9AC756E2C4A0B10 /* JHChainableAnimations.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					armv7,
@@ -817,6 +1015,33 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		D1941263FE25E0D5CC18D55411D7FB51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		DB44C5CA5E7AC762546FE4E73ED003F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -859,6 +1084,33 @@
 			};
 			name = Debug;
 		};
+		EB2351D6D27A5394DB0249F190C5C06E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94DC6333663187E0762085910425977 /* CocoaLumberjack.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -880,11 +1132,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AEF9F994FDF88FB63DB744F3817FFBA1 /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */ = {
+		AF91E049783ED34A211EB68CD2A026EE /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A2E9A188B7CB3432FC5D1F4A862280F1 /* Debug */,
-				11035AB40AAC29D5899704C622C0D59D /* Release */,
+				1F372050C0620074D97BB57D7710EEBA /* Debug */,
+				D1941263FE25E0D5CC18D55411D7FB51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -903,6 +1155,15 @@
 			buildConfigurations = (
 				C53CE9CC8C277164FF987E256B3904C2 /* Debug */,
 				7466178B8588AAA87F70F8439F71F371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0C8BB684C9CCC379207FFA69ED0D571 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB2351D6D27A5394DB0249F190C5C06E /* Debug */,
+				2F528EEAB9ADA4B420F8F2DD5E5B7106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

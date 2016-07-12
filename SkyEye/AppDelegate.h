@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "EMailReport.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

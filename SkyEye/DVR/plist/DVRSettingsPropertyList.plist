@@ -18,7 +18,7 @@
 		<key>Name</key>
 		<string>ZY-NO-IP</string>
 		<key>URL</key>
-		<string>rtsp://nuvoton.no-ip.biz/cam1/mpeg4</string>
+		<string>rtsp://192.168.100.1/cam1/h264</string>
 		<key>Resolution</key>
 		<string>1</string>
 		<key>Encode Quality</key>

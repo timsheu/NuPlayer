@@ -43,7 +43,7 @@ enum{
 };
 
 @interface PlayerManager : NSObject{
-    NSString *path;
+    NSString *path, *settingPath;
 }
 
 @property (strong, nonatomic) NSMutableDictionary *cameraAddress;

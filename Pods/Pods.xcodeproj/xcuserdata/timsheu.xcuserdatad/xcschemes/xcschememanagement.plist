@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JHChainableAnimations.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17C34320B8C01C134D5DB46668F41652</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>45596EEF26239801B4852A0BF25FA724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>48F687CDE9990BD471D7883061F7E5D4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D14CE8B1670F74F6608A159DB1399AEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

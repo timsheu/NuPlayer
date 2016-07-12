@@ -55,6 +55,7 @@
             }
             path = [NSString stringWithString:docfilePath];
             _dictionarySetting = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+            settingPath = [NSString stringWithString:path];
             
             docfilePath = [basePath stringByAppendingString:@"/InfoPropertyListLocal.plist"];
             tempPath = [[NSBundle mainBundle] pathForResource:@"InfoPropertyList" ofType:@"plist"];
@@ -110,7 +111,7 @@
 }
 
 - (BOOL)updateSettingPropertyList{
-    return [_dictionarySetting writeToFile:path atomically:YES];
+    return [_dictionarySetting writeToFile:settingPath atomically:YES];
 }
 
 - (void)resetData{
@@ -122,6 +123,7 @@
     NSDictionary *checkDictinary = [NSDictionary dictionaryWithContentsOfFile:docfilePath];
     [tempDictionary writeToFile:docfilePath atomically:YES];
     path = [NSString stringWithString:docfilePath];
+    settingPath = [NSString stringWithString:path];
     _dictionarySetting = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     
     docfilePath = [basePath stringByAppendingString:@"/InfoPropertyListLocal.plist"];

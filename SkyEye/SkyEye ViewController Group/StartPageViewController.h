@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TrailerContentViewController.h"
 
-@interface StartPageViewController : UIViewController
+@interface StartPageViewController : UIViewController <UIPageViewControllerDataSource, TrailerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *skyEyeButton;
+@property (strong, nonatomic) UIPageViewController *pageViewController;
+@property (strong, nonatomic) NSArray *pageTitles;
+@property (strong, nonatomic) NSArray *pageImages;
+- (IBAction)showTutorial:(id)sender;
 
 @end

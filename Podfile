@@ -4,6 +4,7 @@ target "SkyEye" do
 	pod 'CocoaAsyncSocket', '~> 7.4.3'
 	pod 'JHChainableAnimations', '~> 1.3.0'
 	pod 'iOS-QR-Code-Encoder', '~> 0.0.1'
+	pod 'CocoaLumberjack'
 end
 
 post_install do |installer_representation|
