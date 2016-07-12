@@ -9,6 +9,7 @@
 #import "EMailReport.h"
 
 @implementation EMailReport
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 + (id)sharedInstance{
     static EMailReport *report;
     static dispatch_once_t onceToken;
@@ -33,6 +34,7 @@
 - (BOOL)isCrashed{
     NSString *crashed = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Crashed"];
     BOOL isCrashed = ([crashed isEqualToString:@"YES"]) ? YES : NO;
+    DDLogVerbose(@"Crashed: %d", isCrashed);
     return isCrashed;
 }
 

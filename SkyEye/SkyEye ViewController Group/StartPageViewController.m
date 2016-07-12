@@ -14,7 +14,13 @@
     [[self navigationController]setNavigationBarHidden:YES animated:NO];
     _pageTitles = @[@"Select Platform!", @"Select Camera!", @"Start Streaming!", @"Play Files!", @"Do Settings!"];
     _pageImages = @[@"platform.jpg", @"select.jpg", @"streaming.jpg", @"files.jpg", @"settings.jpg"];
-    [self showTutorial:self];
+    PlayerManager *manager = [PlayerManager sharedInstance];
+    NSString *didTutorial = [manager.dictionarySetting objectForKey:@"DidTutorial"];
+    if ([didTutorial isEqualToString:@"NO"]) {
+        [self showTutorial:self];
+        [manager.dictionarySetting setObject:@"YES" forKey:@"DidTutorial"];
+        [manager updateSettingPropertyList];
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated{

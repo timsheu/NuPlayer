@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TrailerContentViewController.h"
+#import "PlayerManager.h"
 
 @interface StartPageViewController : UIViewController <UIPageViewControllerDataSource, TrailerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *skyEyeButton;

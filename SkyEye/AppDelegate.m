@@ -14,8 +14,9 @@
 
 @implementation AppDelegate
 
+static const DDLogLevel ddLogLevel = DDLogLevelError;
+
 static void uncaughtExceptionHandler(NSException *exception){
-    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
     [[EMailReport sharedInstance] crashed:YES];
     DDLogError(@"CRASH: %@", exception);
     DDLogError(@"Stack Trace: %@", [exception callStackSymbols]);
