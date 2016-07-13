@@ -14,17 +14,16 @@
 
 @implementation AppDelegate
 
-static const DDLogLevel ddLogLevel = DDLogLevelError;
-
-static void uncaughtExceptionHandler(NSException *exception){
-    [[EMailReport sharedInstance] crashed:YES];
-    DDLogError(@"CRASH: %@", exception);
-    DDLogError(@"Stack Trace: %@", [exception callStackSymbols]);
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    KSCrashInstallationEmail *email = [KSCrashInstallationEmail sharedInstance];
+    email.recipients = @[@"CCHSU20@nuvoton.com"];
+    [email setReportStyle:KSCrashEmailReportStyleApple useDefaultFilenameFormat:YES];
+    [email addConditionalAlertWithTitle:@"Crash Detected" message:@"The APP crashed last time it was launched. Send a crash report!" yesAnswer:@"Okay!" noAnswer:@"No thanks."];
+    [email install];
+    [email sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
+        NSLog(@"test");
+    }];
     return YES;
 }
 
@@ -44,29 +43,6 @@ static void uncaughtExceptionHandler(NSException *exception){
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    if ([[EMailReport sharedInstance] isCrashed]) {
-        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
-        mailComposer.mailComposeDelegate = self;
-        [mailComposer setSubject:@"NuPlayer Crash Log"];
-        // Set up recipients
-        NSArray *toRecipients = [NSArray arrayWithObject:@"CCHSU20@nuvoton.com"];
-        [mailComposer setToRecipients:toRecipients];
-        // Attach the Crash Log..
-        
-        //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-        //                                                         NSUserDomainMask, YES);NSString *documentsDirectory = [paths objectAtIndex:0];
-        //    NSString *logPath = [documentsDirectory stringByAppendingPathComponent:@"console.log"];
-        
-        NSString *logPath = [[EMailReport sharedInstance] getCurrentLogFile];
-        NSData *myData = [NSData dataWithContentsOfFile:logPath];
-        [mailComposer addAttachmentData:myData mimeType:@"Text/XML" fileName:@"Report.log"];
-        // Fill out the email body text
-        NSString *emailBody = @"Crash Log";
-        [mailComposer setMessageBody:emailBody isHTML:NO];
-        [self.window.rootViewController presentViewController:mailComposer animated:YES completion:nil];
-        [[EMailReport sharedInstance] crashed:NO];
-    }
-    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

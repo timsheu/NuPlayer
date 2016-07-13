@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KSCrash.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SkyEye.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17C34320B8C01C134D5DB46668F41652</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>45596EEF26239801B4852A0BF25FA724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>48F687CDE9990BD471D7883061F7E5D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7721D993ED2B6C2DEF3331B64CF7FF53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0B158BCFD927E0FE2B6F26E2A3DF0ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>

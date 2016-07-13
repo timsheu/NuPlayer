@@ -30,8 +30,8 @@
 		562A99461C5F25DF00852B9A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99451C5F25DF00852B9A /* libz.tbd */; };
 		562A99481C5F25E800852B9A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99471C5F25E700852B9A /* libstdc++.tbd */; };
 		562A994A1C5F25F000852B9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99491C5F25F000852B9A /* libiconv.tbd */; };
-		562C51C71D34CCE400FFE10F /* EMailReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 562C51C61D34CCE400FFE10F /* EMailReport.m */; };
 		562C51C91D34EAB800FFE10F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562C51C81D34EAB800FFE10F /* MessageUI.framework */; };
+		562C51CE1D35F2C000FFE10F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562C51CD1D35F2C000FFE10F /* SystemConfiguration.framework */; };
 		562C71F11CE07DCD00DF6050 /* AudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 562C71F01CE07DCD00DF6050 /* AudioRecorder.m */; };
 		5632AF861CA9017C004817F9 /* HistoryPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5632AF851CA9017C004817F9 /* HistoryPickerView.m */; };
 		5639273F1C92AED200717A2A /* DVRAudioCommandPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 563927331C92AED200717A2A /* DVRAudioCommandPropertyList.plist */; };
@@ -177,9 +177,8 @@
 		562A99451C5F25DF00852B9A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		562A99471C5F25E700852B9A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		562A99491C5F25F000852B9A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		562C51C51D34CCE400FFE10F /* EMailReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMailReport.h; sourceTree = "<group>"; };
-		562C51C61D34CCE400FFE10F /* EMailReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMailReport.m; sourceTree = "<group>"; };
 		562C51C81D34EAB800FFE10F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		562C51CD1D35F2C000FFE10F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		562C71EF1CE07DCD00DF6050 /* AudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioRecorder.h; path = MicRecorder/AudioRecorder.h; sourceTree = "<group>"; };
 		562C71F01CE07DCD00DF6050 /* AudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioRecorder.m; path = MicRecorder/AudioRecorder.m; sourceTree = "<group>"; };
 		5632AF841CA9017C004817F9 /* HistoryPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryPickerView.h; path = "SyEye Prototype And Delegate/HistoryPickerView.h"; sourceTree = "<group>"; };
@@ -343,6 +342,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562C51CE1D35F2C000FFE10F /* SystemConfiguration.framework in Frameworks */,
 				562C51C91D34EAB800FFE10F /* MessageUI.framework in Frameworks */,
 				568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */,
 				56E40E181C996CBD00DDB8A6 /* libavcodec.a in Frameworks */,
@@ -488,7 +488,6 @@
 		561E84281C4C848A00B62BCF /* SkyEye */ = {
 			isa = PBXGroup;
 			children = (
-				562C51C41D34CCCE00FFE10F /* EMailReport */,
 				56EA39551D2DF725008EF6FB /* TrailerView */,
 				56FAC28E1CDC897800F6D190 /* MicRecorder */,
 				56FA66BF1CB65CED0004DB32 /* FFMpegDecoder */,
@@ -656,15 +655,6 @@
 			name = "Command Generator";
 			sourceTree = "<group>";
 		};
-		562C51C41D34CCCE00FFE10F /* EMailReport */ = {
-			isa = PBXGroup;
-			children = (
-				562C51C51D34CCE400FFE10F /* EMailReport.h */,
-				562C51C61D34CCE400FFE10F /* EMailReport.m */,
-			);
-			path = EMailReport;
-			sourceTree = "<group>";
-		};
 		563861451C7C6C1A001E2CE4 /* FileControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -770,6 +760,7 @@
 		E2832C1EF2317BCD4B17F651 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				562C51CD1D35F2C000FFE10F /* SystemConfiguration.framework */,
 				562C51C81D34EAB800FFE10F /* MessageUI.framework */,
 				568CF8C81CAB7DB700A58490 /* libc++.tbd */,
 				560112B31CA3EBB000ABB3CE /* VideoToolbox.framework */,
@@ -1069,7 +1060,6 @@
 				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
 				5639276F1C92B0CC00717A2A /* DVRInfoPool.m in Sources */,
 				563928091C92B48600717A2A /* LiveViewController.m in Sources */,
-				562C51C71D34CCE400FFE10F /* EMailReport.m in Sources */,
 				5639278B1C92B14600717A2A /* DVRMultipleSettingTableViewController.m in Sources */,
 				56BAD7811C9F8F5A0082FBAF /* SelectCameraTableViewController.m in Sources */,
 				563927FB1C92B46D00717A2A /* SettingViewController.m in Sources */,

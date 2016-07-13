@@ -4,6 +4,8 @@
 <dict>
 	<key>DidTutorial</key>
 	<string>NO</string>
+	<key>DidCrashed</key>
+	<string>NO</string>
 	<key>Setup Camera 1</key>
 	<dict>
 		<key>Adaptive</key>

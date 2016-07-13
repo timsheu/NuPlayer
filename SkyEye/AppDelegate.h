@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <KSCrash.h>
+#import <KSCrash/KSCrashInstallation+Alert.h>
+#import <KSCrash/KSCrashInstallationStandard.h>
+#import <KSCrash/KSCrashInstallationQuincyHockey.h>
+#import <KSCrash/KSCrashInstallationEmail.h>
+#import <KSCrash/KSCrashInstallationVictory.h>
+
 #import <MessageUI/MessageUI.h>
-#import "EMailReport.h"
 
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate, MFMailComposeViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

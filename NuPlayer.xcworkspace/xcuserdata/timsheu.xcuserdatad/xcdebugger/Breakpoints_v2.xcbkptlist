@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyEye/SyEye Prototype And Delegate/SocketManager.m"
-            timestampString = "489465608.918613"
+            timestampString = "490067868.461956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "-socket:didReadData:withTag:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-sendAudioData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,30 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SkyEye/AppDelegate.m"
-            timestampString = "490011360.285784"
+            filePath = "SkyEye/EMailReport/CatchCrash.m"
+            timestampString = "490073196.166799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-applicationDidBecomeActive:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SkyEye/DVR/DVR Prototype And Delegate/DVRSocketManager.m"
-            timestampString = "490011448.589475"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-socketDidDisconnect:withError:"
-            landmarkType = "5">
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "uncaughtExceptionHandler()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
