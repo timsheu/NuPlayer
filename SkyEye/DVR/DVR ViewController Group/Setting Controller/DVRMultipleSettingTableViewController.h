@@ -29,7 +29,7 @@
     NSString *receivedCategory;
     UILabel *labelQualityValue, *labelBitRateValue, *labelFPSValue;
     UISlider *sliderQuality, *sliderFPS;
-    UITextField *textfieldName, *textfieldURL, *textfieldSSID, *textfieldPASS;
+    UITextField *textfieldName, *textfieldURL, *textfieldSSID, *textfieldPASS, *textfieldPort;
     UISegmentedControl *controlResolution, *controlDeviceMute, *controlPhoneMute, *controlRecording;
     UIButton *rebootButton, *resetButton, *qrButton;
     UIStepper *stepperBitRate;

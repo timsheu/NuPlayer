@@ -24,7 +24,7 @@
         [receivedString isEqualToString:@"Setup Camera 2"] ||
         [receivedString isEqualToString:@"Setup Camera 3"] ||
         [receivedString isEqualToString:@"Setup Camera 4"]) {
-        rowOfTable = 13;
+        rowOfTable = 14;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 3;
     } else if ([receivedString isEqualToString:@"Device Mic"] ||
@@ -121,11 +121,7 @@
             key = @"3";
         }
         NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:receivedString];
-        CameraInfo *info = [[CameraInfo alloc] initWithDictionary:dic];
-        if (info == nil) {
-            info = [[CameraInfo alloc] initWithCameraURL:url serial:key name:defaultString resolution:nil quality:nil bitRate:nil FPS:nil];
-            [dic setObject:info forKey:info.cameraSerial];
-        }
+        NSString *temp;
         UIButton *buttonHistory;
         label.backgroundColor = [UIColor whiteColor];
         cell.backgroundColor = [UIColor whiteColor];
@@ -135,14 +131,16 @@
                 [textfield setHidden:NO];
                 label.text = @"Name";
                 textfieldName = textfield;
-                textfieldName.text = info.cameraName;
+                temp = [NSString stringWithString:[dic objectForKey:@"Name"]];
+                textfieldName.text = temp;
                 break;
             case 1: //url
                 [label setHidden:NO];
                 [textfield setHidden:NO];
                 label.text = @"URL Address";
                 textfieldURL = textfield;
-                textfieldURL.text = info.cameraURL;
+                temp = [NSString stringWithString:[dic objectForKey:@"URL"]];
+                textfieldURL.text = temp;
                 [textfieldURL setRightViewMode:UITextFieldViewModeAlways];
                 buttonHistory = [UIButton buttonWithType:UIButtonTypeInfoLight];
                 buttonHistory.contentMode = UIViewContentModeCenter;
@@ -150,18 +148,27 @@
                 [buttonHistory setImage:[UIImage imageNamed:@"signature"] forState:UIControlStateNormal];
                 textfieldURL.rightView = buttonHistory;
                 break;
-            case 2: //resolution
+            case 2:
+                [label setHidden:NO];
+                label.text = @"Port";
+                [textfield setHidden:NO];
+                textfieldPort = textfield;
+                temp = [NSString stringWithString:[dic objectForKey:@"port"]];
+                textfieldPort.text = temp;
+                break;
+            case 3: //resolution
                 [label setHidden:NO];
                 [control setHidden:NO];
                 label.text = @"Resolution";
                 controlResolution = control;
+                temp = [NSString stringWithString:[dic objectForKey:@"Resolution"]];
                 [controlResolution setTitle:@"QVGA" forSegmentAtIndex:0];
                 [controlResolution setTitle:@"VGA" forSegmentAtIndex:1];
                 [controlResolution setTitle:@"720p" forSegmentAtIndex:2];
                 [controlResolution setTitle:@"1080p" forSegmentAtIndex:3];
-                [controlResolution setSelectedSegmentIndex:info.cameraResolution.intValue];
+                [controlResolution setSelectedSegmentIndex:temp.intValue];
                 break;
-            case 3: // adaptive
+            case 4: // adaptive
                 [label setHidden:NO];
                 label.text = @"Adaptive";
                 label.backgroundColor = UIColorFromRGB(0xCCE3FF);
@@ -178,7 +185,7 @@
                 string = [dic objectForKey:label.text];
                 controlAdaptive.selectedSegmentIndex = string.intValue;
                 break;
-            case 4: // fixed bitrate
+            case 5: // fixed bitrate
                 [label setHidden:NO];
                 label.text = @"Fixed Bit Rate";
                 label.backgroundColor = UIColorFromRGB(0xCCE3FF);
@@ -195,7 +202,7 @@
                 string = [dic objectForKey:label.text];
                 controlFixedBitrate.selectedSegmentIndex = string.intValue;
                 break;
-            case 5: // fixed quality
+            case 6: // fixed quality
                 [label setHidden:NO];
                 label.text = @"Fixed Quality";
                 label.backgroundColor = UIColorFromRGB(0xCCE3FF);
@@ -212,7 +219,7 @@
                 string = [dic objectForKey:label.text];
                 controlFixedQuality.selectedSegmentIndex = string.intValue;
                 break;
-            case 6: //fps
+            case 7: //fps
                 [label setHidden:NO];
                 [labelValue setHidden:NO];
                 [slider setHidden:NO];
@@ -221,14 +228,11 @@
                 sliderFPS = slider;
                 sliderFPS.minimumValue = 1;
                 sliderFPS.maximumValue = 30;
-                sliderFPS.value = (float)[info.cameraFPS intValue];
-                if (sliderFPS.value == 30) {
-                    labelFPSValue.text = [NSString stringWithFormat:@"%d (Max)", (int)sliderFPS.value];
-                }else{
-                    labelFPSValue.text = [NSString stringWithFormat:@"%d", (int)sliderFPS.value];
-                }
+                temp = [NSString stringWithString:[dic objectForKey:@"FPS"]];
+                sliderFPS.value = (float)temp.intValue;
+                labelFPSValue.text = [NSString stringWithFormat:@"%d", (int)sliderFPS.value];
                 break;
-            case 7:
+            case 8:
                 [label setHidden:NO];
                 [control setHidden:NO];
                 if (control.numberOfSegments > 3) {
@@ -247,7 +251,7 @@
                 }
                 label.text = @"Device Mic";
                 break;
-            case 8:
+            case 9:
                 [label setHidden:NO];
                 dic = [manager.dictionarySetting objectForKey:receivedString];
                 dic = [dic objectForKey:@"Device Info"];
@@ -259,7 +263,7 @@
                 }
                 [labelInfo setHidden:NO];
                 break;
-            case 9:
+            case 10:
                 [label setHidden:NO];
                 [control setHidden:NO];
                 controlTransmission = control;
@@ -275,7 +279,7 @@
                     controlTransmission.selectedSegmentIndex = 0;
                 }
                 break;
-            case 10:
+            case 11:
                 [label setHidden:NO];
                 label.text = @"Recorder Status";
                 if ([[dic objectForKey:@"Recorder Status"] isEqualToString:@"1"]) {
@@ -285,14 +289,14 @@
                 }
                 [labelInfo setHidden:NO];
                 break;
-            case 11:
+            case 12:
                 [label setHidden:NO];
                 label.text = @"Reboot System";
                 rebootButton = button;
                 [rebootButton setTitle:@"Reboot" forState:UIControlStateNormal];
                 [rebootButton setHidden:NO];
                 break;
-            case 12:
+            case 13:
                 [label setHidden:NO];
                 label.text = @"Reset Data";
                 resetButton = button;
@@ -526,8 +530,12 @@
         }
     }
 }
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    return YES;
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     PlayerManager *manager = [PlayerManager sharedInstance];
     NSMutableDictionary *dic = manager.dictionarySetting;
     NSMutableDictionary *cameraDic = [dic objectForKey:receivedString];
@@ -537,6 +545,9 @@
     }else if([textField isEqual:textfieldURL]){
         NSString *string = [NSString stringWithString:textfieldURL.text];
         [cameraDic setObject:string forKey:@"URL"];
+    }else if([textField isEqual:textfieldPort]){
+        NSString *string = [NSString stringWithString:textfieldPort.text];
+        [cameraDic setObject:string forKey:@"port"];
     }
     [self.view endEditing:YES];
     [self updateHistoryRecord];
@@ -865,7 +876,8 @@
     }else{
         splitURL = [split objectAtIndex:2];
     }
-    [socketManager connectHost:splitURL withPort:@"8000" withTag:tag];
+    NSString *port = [dic objectForKey:@"port"];
+    [socketManager connectHost:splitURL withPort:port withTag:tag];
 }
 
 #pragma socket manager delegate

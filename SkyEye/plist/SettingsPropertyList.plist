@@ -8,6 +8,8 @@
 	<string>NO</string>
 	<key>Setup Camera 1</key>
 	<dict>
+		<key>port</key>
+		<string>8000</string>
 		<key>Adaptive</key>
 		<string>-1</string>
 		<key>Fixed Quality</key>
@@ -59,6 +61,8 @@
 	</dict>
 	<key>Setup Camera 2</key>
 	<dict>
+		<key>port</key>
+		<string>8000</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Fixed Bit Rate</key>
@@ -103,6 +107,8 @@
 	</dict>
 	<key>Setup Camera 3</key>
 	<dict>
+		<key>port</key>
+		<string>8000</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Adaptive</key>
@@ -147,6 +153,8 @@
 	</dict>
 	<key>Setup Camera 4</key>
 	<dict>
+		<key>port</key>
+		<string>8000</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Adaptive</key>

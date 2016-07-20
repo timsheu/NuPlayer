@@ -19,7 +19,7 @@
     [_historyPicker setHidden:YES];
     sectionOfTable = 1;
     if ([receivedString isEqualToString:@"Setup DVR"]) {
-        rowOfTable = 5;
+        rowOfTable = 6;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 3;
     } else if ([receivedString isEqualToString:@"Device Mic"] ||
@@ -97,17 +97,13 @@
         UIControl *ui = [cell viewWithTag:i];
         [ui setHidden:YES];
     }
+    NSString *temp;
     if ( [receivedString isEqualToString:@"Setup DVR"]) {
         DVRPlayerManager *manager = [DVRPlayerManager sharedInstance];
         NSString *url = [manager.dictionarySetting objectForKey:@"URL"];
         NSString *key;
         key = @"0";
         NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:receivedString];
-        DVRCameraInfo *info = [[DVRCameraInfo alloc] initWithDictionary:dic];
-        if (info == nil) {
-            info = [[DVRCameraInfo alloc] initWithCameraURL:url serial:key name:defaultString resolution:nil quality:nil bitRate:nil FPS:nil recording:nil];
-            [dic setObject:info forKey:info.cameraSerial];
-        }
         UIButton *buttonHistory;
         switch (indexPath.row) {
             case 0: //name
@@ -115,14 +111,15 @@
                 [textfield setHidden:NO];
                 label.text = @"Name";
                 textfieldName = textfield;
-                textfieldName.text = info.cameraName;
+                temp = [NSString stringWithString:[dic objectForKey:@"Name"]];
+                textfieldName.text = temp;
                 break;
             case 1: //url
                 [label setHidden:NO];
                 [textfield setHidden:NO];
                 label.text = @"URL Address";
                 textfieldURL = textfield;
-                textfieldURL.text = info.cameraURL;
+                textfieldURL.text = [dic objectForKey:@"URL"];
                 [textfieldURL setRightViewMode:UITextFieldViewModeAlways];
                 buttonHistory = [UIButton buttonWithType:UIButtonTypeInfoLight];
                 buttonHistory.contentMode = UIViewContentModeCenter;
@@ -131,7 +128,15 @@
 //                textfieldURL.rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"qr-code"]];
                 textfieldURL.rightView = buttonHistory;
                 break;
-            case 2: //resolution
+            case 2: //port
+                [label setHidden:NO];
+                [textfield setHidden:NO];
+                label.text = @"Port";
+                textfieldPort = textfield;
+                temp = [NSString stringWithString:[dic objectForKey:@"port"]];
+                textfieldPort.text = temp;
+                break;
+            case 3: //resolution
                 [label setHidden:NO];
                 [control setHidden:NO];
                 label.text = @"Resolution";
@@ -140,40 +145,10 @@
                 [controlResolution setTitle:@"VGA" forSegmentAtIndex:1];
                 [controlResolution setTitle:@"720p" forSegmentAtIndex:2];
                 [controlResolution setTitle:@"1080p" forSegmentAtIndex:3];
-                [controlResolution setSelectedSegmentIndex:info.cameraResolution.intValue];
+                temp = [NSString stringWithString:[dic objectForKey:@"Resolution"]];
+                [controlResolution setSelectedSegmentIndex:temp.intValue];
                 break;
-//            case 3: //quality
-//                [label setHidden:NO];
-//                [labelValue setHidden:NO];
-//                [slider setHidden:NO];
-//                labelQualityValue = labelValue;
-//                label.text = @"Quality";
-//                sliderQuality = slider;
-//                sliderQuality.minimumValue = 1;
-//                sliderQuality.maximumValue = 15;
-//                sliderQuality.value = (float)[info.cameraQuality intValue];
-//                if (sliderQuality.value == 1) {
-//                    labelQualityValue.text = [NSString stringWithFormat:@"%d (best)", (int)sliderQuality.value];
-//                }else{
-//                    labelQualityValue.text = [NSString stringWithFormat:@"%d", (int)sliderQuality.value];
-//                }
-//                break;
-//            case 4: //bitrate
-//                [label setHidden:NO];
-//                [labelValue setHidden:NO];
-//                [stepper setHidden:NO];
-//                label.text = @"Bit Rate";
-//                labelValue.text = [NSString stringWithFormat:@"%@ Kbps", info.cameraBitRate];
-//                labelBitRateValue = labelValue;
-//                stepperBitRate = stepper;
-//                stepperBitRate.minimumValue = 256;
-//                stepperBitRate.maximumValue = 6144;
-//                stepperBitRate.stepValue = 256;
-//                stepperBitRate.value = info.cameraBitRate.intValue;
-//                stepperBitRate.continuous = YES;
-//                stepperBitRate.wraps = NO;
-//                break;
-            case 3: //fps
+            case 4: //fps
                 [label setHidden:NO];
                 [labelValue setHidden:NO];
                 [slider setHidden:NO];
@@ -182,14 +157,11 @@
                 sliderFPS = slider;
                 sliderFPS.minimumValue = 1;
                 sliderFPS.maximumValue = 30;
-                sliderFPS.value = (float)[info.cameraFPS intValue];
-                if (sliderFPS.value == 30) {
-                    labelFPSValue.text = [NSString stringWithFormat:@"%d (Max)", (int)sliderFPS.value];
-                }else{
-                    labelFPSValue.text = [NSString stringWithFormat:@"%d", (int)sliderFPS.value];
-                }
+                temp = [NSString stringWithString:[dic objectForKey:@"FPS"]];
+                sliderFPS.value = (float)temp.intValue;
+                labelFPSValue.text = [NSString stringWithFormat:@"%d", (int)sliderFPS.value];
                 break;
-            case 4: // is recording
+            case 5: // is recording
                 [label setHidden:NO];
                 [control setHidden:NO];
                 label.text = @"Record Status";
@@ -198,7 +170,8 @@
                 [controlRecording removeSegmentAtIndex:2 animated:NO];
                 [controlRecording setTitle:@"Stop" forSegmentAtIndex:0];
                 [controlRecording setTitle:@"Start" forSegmentAtIndex:1];
-                controlRecording.selectedSegmentIndex = info.cameraRecording.intValue;
+                temp = [NSString stringWithString:[dic objectForKey:@"Recording"]];
+                controlRecording.selectedSegmentIndex = temp.intValue;
                 break;
             default:
                 break;
@@ -399,6 +372,11 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    return YES;
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
     DVRPlayerManager *manager = [DVRPlayerManager sharedInstance];
     NSMutableDictionary *dic = manager.dictionarySetting;
     NSMutableDictionary *cameraDic = [dic objectForKey:receivedString];
@@ -408,6 +386,9 @@
     }else if([textField isEqual:textfieldURL]){
         NSString *string = [NSString stringWithString:textfieldURL.text];
         [cameraDic setObject:string forKey:@"URL"];
+    }else if([textField isEqual:textfieldPort]){
+        NSString *string = [NSString stringWithString:textfieldPort.text];
+        [cameraDic setObject:string forKey:@"port"];
     }
     [self.view endEditing:YES];
     [self updateHistoryRecord];
@@ -471,6 +452,8 @@
         [settingDic setObject:string forKey:@"FPS"];
         string = [NSString stringWithFormat:@"%d", (int)controlRecording];
         [settingDic setObject:string forKey:@"Recording"];
+        string = [NSString stringWithString:textfieldPort.text];
+        [settingDic setObject:string forKey:@"Port"];
     }else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         NSString *ssid = [NSString stringWithString:textfieldSSID.text];
         [settingDic setObject:ssid forKey:@"SSID"];

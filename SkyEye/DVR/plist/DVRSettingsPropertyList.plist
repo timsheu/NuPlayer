@@ -4,6 +4,8 @@
 <dict>
 	<key>Setup DVR</key>
 	<dict>
+		<key>port</key>
+		<string>8000</string>
 		<key>Transmission</key>
 		<string>UDP</string>
 		<key>Device Info</key>

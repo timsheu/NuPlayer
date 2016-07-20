@@ -87,13 +87,13 @@
     if (err.code >=4 && err.code < 7) {
         [_delegate hostNotResponse:tagLocal command:commandToBeSent];
     }else if (err.code == 61){
-        [self connectHost:localURL withPort:@"80" withTag:tagLocal];
+//        [self connectHost:localURL withPort:@"8000" withTag:tagLocal];
     }
     
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
-    NSLog(@"did write data: %@", commandToBeSent);
+//    NSLog(@"did write data: %@", commandToBeSent);
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
@@ -315,14 +315,13 @@
         splitURL = [split objectAtIndex:2];
     }
     localURL = splitURL;
+    NSString *port = [dic objectForKey:@"port"];
     if (isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
-        NSLog(@"connect to host; send command set");
-
-        return [self connectHost:splitURL withPort:@"8000" withTag:tag];
+        NSLog(@"connect to host; send command set: %@", port);
+        return [self connectHost:splitURL withPort:port withTag:tag];
     }else{
-        NSLog(@"direct send command set");
-        [self sendData];
-        return YES;
+//        [self sendData];
+        return NO;
     }
 }
 
@@ -348,13 +347,14 @@
     }
     localURL = splitURL;
     indexLocal = index;
+    NSString *port = [dic objectForKey:@"port"];
     if (isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
         NSLog(@"connect to host; send command set");
-        return [self connectHost:splitURL withPort:@"8000" withTag:tag];
+        return [self connectHost:splitURL withPort:port withTag:tag];
     }else{
         NSLog(@"direct send command set");
-        [self sendData];
-        return YES;
+//        [self sendData];
+        return NO;
     }
     
 }

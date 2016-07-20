@@ -29,6 +29,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.tabBarController.tabBar setHidden:YES];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     if (passedArray == nil) {
@@ -37,6 +41,9 @@
     if (passedString == nil) {
         passedString = [[NSString alloc]init];
     }
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
+    [NSTimer timerWithTimeInterval:1 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 #pragma TableView Delegate

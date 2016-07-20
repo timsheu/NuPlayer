@@ -54,6 +54,9 @@
     _outletSnapshotResult.alpha = 0;
     [_outletMicButton setImage:[UIImage imageNamed:@"mic-mute"] forState:UIControlStateNormal];
     [self initCamera:cameraString.intValue];
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
+    [self.tabBarController.tabBar setHidden:NO];
+    [NSTimer timerWithTimeInterval:1 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -250,6 +253,7 @@
         _outletPlayButton.enabled = YES;
         _outletSnapshotButton.enabled = YES;
         [outletBuffering stopAnimating];
+        [self.tabBarController.tabBar setUserInteractionEnabled:YES];
     });
 }
 
@@ -419,6 +423,7 @@
 }
 
 - (void)updateCameraSettings{
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
     _outletOffline.text = @"ONLINE";
     [checkTimer invalidate];
     checkTimer = nil;
@@ -452,19 +457,19 @@
     // palFrame: 30 frame per second
     float palFrame = 1.0/30; // PAL Mode
     dotTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(flashRedDot) userInfo:nil repeats:YES];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            while (isPlaying) {
-            [self displayLiveNextFrame:nil];
-            [NSThread sleepForTimeInterval:palFrame];
-        }
-    });
-//    playTimer = [NSTimer scheduledTimerWithTimeInterval:palFrame
-//                                                 target:self
-//                                               selector:@selector(displayLiveNextFrame:)
-//                                               userInfo:nil
-//                                                repeats:YES];
-//    
-//    isPlaying = NO;
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            while (isPlaying) {
+//            [self displayLiveNextFrame:nil];
+//            [NSThread sleepForTimeInterval:palFrame];
+//        }
+//    });
+    playTimer = [NSTimer scheduledTimerWithTimeInterval:palFrame
+                                                 target:self
+                                               selector:@selector(displayLiveNextFrame:)
+                                               userInfo:nil
+                                                repeats:YES];
+    
+    isPlaying = NO;
 }
 
 - (void)startRecordVoice:(id)sender{
@@ -487,6 +492,10 @@
     NSString *cameraSerial = [NSString stringWithFormat:@"Setup Camera %@", cameraString];
     socketManager = [SocketManager shareInstance];
     [socketManager sendCommandData:data toCamera:cameraSerial withTag:SOCKET_UPLOAD_AUDIO_STREAM];
+}
+
+- (void)enableTabBar{
+    [self.tabBarController.tabBar setUserInteractionEnabled:YES];
 }
 
 @end

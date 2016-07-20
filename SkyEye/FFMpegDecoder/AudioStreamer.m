@@ -277,7 +277,9 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
                 
                 
 //                _streamer.audioPacketQueueSize -= packet->size;
-                av_free_packet(packet);
+                if (packet->buf != NULL) {
+                    av_free_packet(packet);
+                }
             }
             else {
                 break;

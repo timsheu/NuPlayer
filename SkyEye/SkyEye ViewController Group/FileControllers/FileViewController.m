@@ -25,6 +25,9 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [self refreshFileList];
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
+    [NSTimer timerWithTimeInterval:3 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -170,7 +173,13 @@
     [view show];
     [self.refreshControl endRefreshing];
 }
+
 - (void)hostResponse:(int)tag{
     
 }
+
+- (void)enableTabBar{
+    [self.tabBarController.tabBar setUserInteractionEnabled:YES];
+}
+
 @end

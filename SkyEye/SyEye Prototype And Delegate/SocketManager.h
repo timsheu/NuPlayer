@@ -27,7 +27,6 @@
 
 @interface SocketManager : NSObject <GCDAsyncSocketDelegate>{
     GCDAsyncSocket *socket, *socketSwap;
-    
     int serial;
     NSMutableArray *connectedSocket;
     dispatch_queue_t socketQueue;
