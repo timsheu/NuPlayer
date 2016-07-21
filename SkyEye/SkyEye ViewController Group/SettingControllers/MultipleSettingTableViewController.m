@@ -24,7 +24,7 @@
         [receivedString isEqualToString:@"Setup Camera 2"] ||
         [receivedString isEqualToString:@"Setup Camera 3"] ||
         [receivedString isEqualToString:@"Setup Camera 4"]) {
-        rowOfTable = 14;
+        rowOfTable = 13;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 3;
     } else if ([receivedString isEqualToString:@"Device Mic"] ||
@@ -295,13 +295,6 @@
                 rebootButton = button;
                 [rebootButton setTitle:@"Reboot" forState:UIControlStateNormal];
                 [rebootButton setHidden:NO];
-                break;
-            case 13:
-                [label setHidden:NO];
-                label.text = @"Reset Data";
-                resetButton = button;
-                [resetButton setTitle:@"Reset" forState:UIControlStateNormal];
-                [resetButton setHidden:NO];
                 break;
             default:
                 break;
@@ -678,7 +671,10 @@
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
     [_historyPicker setHidden:YES];
-    [self updateHistoryRecord];
+    if (![receivedString isEqualToString:@"Wi-Fi AP Setup"]&&
+        ![receivedString isEqualToString:@"Device Information"]) {
+        [self updateHistoryRecord];
+    }
 }
 
 -(void)setCameraInCategory:(NSString *)category withAnyValue:(NSString *)value{
@@ -1081,7 +1077,6 @@
     [_historyPicker setHidden:YES];
     
 }
-
 
 #pragma mark - Navigation
 

@@ -524,7 +524,11 @@
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
     [_historyPicker setHidden:YES];
-    [self updateHistoryRecord];
+    if (![receivedString isEqualToString:@"Wi-Fi AP Setup"]&&
+        ![receivedString isEqualToString:@"Device Information"]&&
+        ![receivedString isEqualToString:@"Device Mic"]) {
+        [self updateHistoryRecord];
+    }
 }
 
 -(void)sendValueWithCategory:(NSString *)category value:(NSString *)value{

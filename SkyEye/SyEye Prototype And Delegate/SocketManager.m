@@ -318,7 +318,7 @@
     if (_isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
         return [self connectHost:splitURL withPort:port withTag:tag];
     }else{
-//        [self sendAudioData];
+        [self sendAudioData];
         return NO;
     }
 }
