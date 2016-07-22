@@ -24,7 +24,7 @@
         [receivedString isEqualToString:@"Setup Camera 2"] ||
         [receivedString isEqualToString:@"Setup Camera 3"] ||
         [receivedString isEqualToString:@"Setup Camera 4"]) {
-        rowOfTable = 13;
+        rowOfTable = 14;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 3;
     } else if ([receivedString isEqualToString:@"Device Mic"] ||
@@ -47,7 +47,7 @@
 -(void)viewDidDisappear:(BOOL)animated{
     [self updateAllSettingData];
     BOOL update = [[PlayerManager sharedInstance] updateSettingPropertyList];
-    NSLog(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
+    DDLogDebug(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -296,6 +296,12 @@
                 [rebootButton setTitle:@"Reboot" forState:UIControlStateNormal];
                 [rebootButton setHidden:NO];
                 break;
+            case 13:
+                [label setHidden:NO];
+                label.text = @"Report";
+                [button setHidden:NO];
+                sendReportButton = button;
+                [sendReportButton setTitle:@"Send Report" forState:UIControlStateNormal];
             default:
                 break;
         }
@@ -413,7 +419,7 @@
     for (NSString *s in array) {
         qrString = [qrString stringByAppendingString:s];
     }
-    NSLog(@"qr String: %@", qrString);
+    DDLogDebug(@"qr String: %@", qrString);
     qrCodeString = [NSString stringWithString:qrString];
     NSString *identifier = @"QRCodeSegue";
     [self performSegueWithIdentifier:identifier sender:self];
@@ -430,6 +436,8 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Data will reset, are you sure?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Okay", nil];
         alert.tag = 1;
         [alert show];
+    } else if([button isEqual:sendReportButton]){
+        [self sendMail:nil];
     }
 }
 
@@ -626,12 +634,12 @@
 
 -(NSDictionary *)getSSID{
     NSArray *interfaces = (__bridge_transfer NSArray *) CNCopySupportedInterfaces();
-    NSLog(@"Supported interfaces :%@", interfaces);
+    DDLogDebug(@"Supported interfaces :%@", interfaces);
     
     NSDictionary *info;
     for (NSString *interfaceName in interfaces) {
         info = (__bridge_transfer NSDictionary *)CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName);
-        NSLog(@"%@ => %@", interfaceName, info);
+        DDLogDebug(@"%@ => %@", interfaceName, info);
         if (info && [info count] ) {
             break;
         }
@@ -665,7 +673,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     [_historyPicker setHidden:YES];
-    NSLog(@"touches began");
+    DDLogDebug(@"touches began");
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -690,7 +698,7 @@
     [dic setObject:value forKey:@"Value"];
     NSString *generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateSettingCommandWithDictionary:dic]];
     SocketManager *socketManager = [SocketManager shareInstance];
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     if ([category isEqualToString:@"Device Mic"]) {
         [socketManager sendCommand:generatedCommand toCamera:receivedString withTag:SOCKET_READ_TAG_OTHER];
     }
@@ -700,7 +708,7 @@
 -(void)sendRebootSystemCommand{
     NSString *generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateInfoCommandWithName:@"Reboot System"]];
     SocketManager *socketManager = [SocketManager shareInstance];
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     [socketManager sendCommand:generatedCommand toCamera:@"Setup Camera 1" withTag:SOCKET_READ_TAG_INFO_REBOOT];
 }
 
@@ -968,7 +976,7 @@
 //    CGFloat y = pickerView.bounds.origin.y;
 //    CGFloat w = pickerView.bounds.size.width;
 //    CGFloat h = pickerView.bounds.size.height;
-//    NSLog(@"cell frame size: %f, %f, %f, %f", x, y, w, h);
+//    DDLogDebug(@"cell frame size: %f, %f, %f, %f", x, y, w, h);
     [label setTextAlignment:NSTextAlignmentCenter];
 //    label.backgroundColor = [UIColor whiteColor];// UIColorFromRGB(0x007DFF);
     label.textColor = UIColorFromRGB(0x007DFF);
@@ -1090,6 +1098,41 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
+- (void)sendMail:(id)sender{
+    if ([MFMailComposeViewController canSendMail]) {
+        mailComposer = [[MFMailComposeViewController alloc]init];
+        mailComposer.mailComposeDelegate = self;
+        [mailComposer setSubject:@"Send Report"];
+        [mailComposer setToRecipients:@[@"CCHSU20@nuvoton.com"]];
+        [mailComposer setMessageBody:@"" isHTML:NO];
+        PlayerManager *manager = [PlayerManager sharedInstance];
+        NSString *file = manager.getCurrentLogFilePath;
+        NSArray *filePart = [file componentsSeparatedByString:@"."];
+        NSString *filename = [filePart objectAtIndex:0];
+        NSData *fileData = [NSData dataWithContentsOfFile:file];
+        
+        NSString *mimeType = @"text/plain";
+        [mailComposer addAttachmentData:fileData mimeType:mimeType fileName:filename];
+        [self presentViewController:mailComposer animated:YES completion:NULL];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"E-mail not Enable" message:@"Configure your E-mail account first!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    if (result) {
+        DDLogDebug(@"Result : %d",result);
+    }
+    if (error) {
+        DDLogDebug(@"Error : %@",error);
+    }
+    [self dismissModalViewControllerAnimated:YES];
+    
+}
+
 
 
 @end

@@ -15,7 +15,7 @@
 #import <KSCrash/KSCrashInstallationVictory.h>
 
 #import <MessageUI/MessageUI.h>
-
+#import "PlayerManager.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

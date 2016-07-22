@@ -17,6 +17,7 @@
 #import "QRCodeGenerator.h"
 #import "HistoryTableView.h"
 #import "HistoryPickerView.h"
+#import <MessageUI/MessageUI.h>
 @import SystemConfiguration.CaptiveNetwork;
 @class MultipleSettingTableViewController;
 @protocol MultipleSettingTableViewControllerDelegate <NSObject>
@@ -29,7 +30,8 @@
 green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
 blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
 alpha:1.0]
-@interface MultipleSettingTableViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate, SocketManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>{
+@interface MultipleSettingTableViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate, SocketManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, MFMailComposeViewControllerDelegate>{
+    MFMailComposeViewController *mailComposer;
     NSString *receivedString;
     NSArray *receivedArray;
     NSString *receivedCategory;
@@ -37,7 +39,7 @@ alpha:1.0]
     UISlider *sliderQuality, *sliderFPS;
     UITextField *textfieldName, *textfieldURL, *textfieldSSID, *textfieldPASS, *textfieldPort;
     UISegmentedControl *controlResolution, *controlDeviceMute, *controlPhoneMute, *controlAdaptive, *controlTransmission, *controlFixedBitrate, *controlFixedQuality;
-    UIButton *rebootButton, *resetButton, *qrButton;
+    UIButton *rebootButton, *resetButton, *qrButton, *sendReportButton;
     UIStepper *stepperBitRate;
     NSString *sliderSavedValue;
     NSString *qrCodeString;

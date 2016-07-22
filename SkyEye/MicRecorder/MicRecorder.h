@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import "PlayerManager.h"
 @interface MicRecorder : NSObject
 
 @property (strong, nonatomic) AVAudioRecorder *audioRecorder;

@@ -39,7 +39,7 @@
 }
 
 - (void)sendAudioData{
-//    NSLog(@"socket manager, send audio data, %@", commandToBeSentInData);
+//    DDLogDebug(@"socket manager, send audio data, %@", commandToBeSentInData);
     [socket writeData:commandToBeSentInData withTimeout:-1 tag:tagLocal];
 }
 
@@ -67,7 +67,7 @@
     _isConnected = YES;
     _hostURL = [[NSString alloc] initWithString:host];
     _hostPort = [[NSString alloc] initWithFormat:@"%d", port];
-    NSLog(@"Did connected to Host: %@ at port: %@", _hostURL, _hostPort);
+    DDLogDebug(@"Did connected to Host: %@ at port: %@", _hostURL, _hostPort);
     [self sendData];
 }
 
@@ -82,13 +82,13 @@
     }
     _hostURL = hostURL;
     _hostPort = hostPort;
-    NSLog(@"address: %@, port: %@", _hostURL, _hostPort);
+    DDLogDebug(@"address: %@, port: %@", _hostURL, _hostPort);
     ret = [socket connectToHost:_hostURL onPort:_hostPort.intValue withTimeout:3 error:nil];
     return ret;
 }
 
 -(void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
-    NSLog(@"error code: %ld", (long)err.code);
+    DDLogDebug(@"error code: %ld", (long)err.code);
     _isConnected = NO;
     if (err.code >=4 && err.code < 7) {
         [_delegate hostNotResponse:tagLocal command:commandToBeSent];
@@ -98,13 +98,13 @@
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
-//    NSLog(@"did write data: %@", commandToBeSent);
+//    DDLogDebug(@"did write data: %@", commandToBeSent);
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
     NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"===tag: %ld", (long)tag);
-    NSLog(@"%@", string);
+    DDLogDebug(@"===tag: %ld", (long)tag);
+    DDLogDebug(@"%@", string);
     PlayerManager *manager = [PlayerManager sharedInstance];
     if (tag == SOCKET_READ_TAG_CAMERA_1 || tag == SOCKET_READ_TAG_CAMERA_2 || tag == SOCKET_READ_TAG_CAMERA_3 || tag == SOCKET_READ_TAG_CAMERA_4) {
         NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:cameraSerialLocal];
@@ -180,7 +180,7 @@
             [socket readDataWithTimeout:-1 tag:SOCKET_READ_TAG_INFO_STORAGE];
             return;
         } else {
-            NSLog(@"storage result: %@", targetString);
+            DDLogDebug(@"storage result: %@", targetString);
             NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:cameraSerialLocal];
             NSMutableDictionary *deviceInfo = [dic objectForKey:@"Device Info"];
             [deviceInfo setObject:targetString forKey:@"Available Storage"];
@@ -199,7 +199,7 @@
             [socket readDataWithTimeout:-1 tag:SOCKET_READ_TAG_INFO_STATUS];
             return;
         } else {
-            NSLog(@"status result: %@", targetString);
+            DDLogDebug(@"status result: %@", targetString);
             NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:cameraSerialLocal];
             NSMutableDictionary *deviceInfo = [dic objectForKey:@"Device Info"];
             [dic setObject:targetString forKey:@"Recording"];
@@ -285,10 +285,10 @@
         }
     }else if(tag == SOCKET_READ_TAG_SEND_SETTING){
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", string);
+        DDLogDebug(@"%@", string);
     }else if(tag == SOCKET_READ_TAG_SET_PLUGIN){
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", string);
+        DDLogDebug(@"%@", string);
         if (indexLocal+1 < commandSetLocal.count) {
             [self sendCommandSet:commandSetLocal toCamera:cameraSerialLocal withTag:tagLocal index:indexLocal+1];
         }
@@ -297,7 +297,7 @@
 
 - (BOOL)sendCommandData:(NSData *)command toCamera:(NSString *)cameraSerial withTag:(int)tag{
     NSString *string = [[NSString alloc] initWithData:command encoding:NSUTF8StringEncoding];
-    NSLog(@"send command data: %@", string);
+    DDLogDebug(@"send command data: %@", string);
     commandToBeSent = string;
     commandToBeSentInData = [NSData dataWithData:command];
     cameraSerialLocal = [NSString stringWithString:cameraSerial];
@@ -341,7 +341,7 @@
     localURL = splitURL;
     NSString *port = [dic objectForKey:@"port"];
     if (_isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
-        NSLog(@"connect to host; send command set");
+        DDLogDebug(@"connect to host; send command set");
         return [self connectHost:splitURL withPort:port withTag:tag];
     }else{
 //        [self sendData];
@@ -373,10 +373,10 @@
     indexLocal = index;
     NSString *port = [dic objectForKey:@"port"];
     if (_isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
-        NSLog(@"connect to host; send command set");
+        DDLogDebug(@"connect to host; send command set");
         return [self connectHost:splitURL withPort:port withTag:tag];
     }else{
-        NSLog(@"direct send command set");
+        DDLogDebug(@"direct send command set");
 //        [self sendData];
         return NO;
     }
@@ -386,17 +386,17 @@
 - (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket{
     socketSwap = newSocket;
     [_delegate acceptNewSocket];
-//    NSLog(@"did accept socket");
+//    DDLogDebug(@"did accept socket");
 }
 
 - (void)waitSocketConnection{
     BOOL ret = [socketSwap acceptOnPort:8080 error:nil];
-//    NSLog(@"wait socket connection");
+//    DDLogDebug(@"wait socket connection");
 }
 
 - (void)sendMicAudio:(NSData *)data{
     [socketSwap writeData:data withTimeout:-1 tag:SOCKET_UPLOAD_AUDIO_STREAM];
-//    NSLog(@"send mic audio");
+//    DDLogDebug(@"send mic audio");
 }
 
 - (void)disconnectMicSocket{

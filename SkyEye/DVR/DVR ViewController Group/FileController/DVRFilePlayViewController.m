@@ -161,7 +161,7 @@
 
 #pragma ffmpeg action
 -(void)displayNextFrame:(NSTimer *)timer {
-//    NSLog(@"%f, %f", currentDuration, _outletSeekSlider.maximumValue);
+//    DDLogDebug(@"%f, %f", currentDuration, _outletSeekSlider.maximumValue);
     [_outletSeekSlider setEnabled:YES];
     [_outletPlayButton setEnabled:YES];
     if (![_video stepFrame] || currentDuration == _outletSeekSlider.maximumValue) {
@@ -240,7 +240,7 @@
 - (void)sliderTimerAction{
     _outletSeekSlider.value += 1;
     [self changeTime:_outletSeekSlider.value];
-    NSLog(@"%f, %f", _outletSeekSlider.maximumValue, _outletSeekSlider.value);
+    DDLogDebug(@"%f, %f", _outletSeekSlider.maximumValue, _outletSeekSlider.value);
 }
 
 - (void)changeTime:(float)value{

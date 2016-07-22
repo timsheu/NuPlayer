@@ -22,7 +22,7 @@
 #pragma table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"history cell clicked: %d", indexPath.row);
+    DDLogDebug(@"history cell clicked: %d", indexPath.row);
 }
 
 -(NSInteger)numberOfSections{

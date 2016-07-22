@@ -184,7 +184,7 @@
 }
 
 + (NSData *)generateUploadAudioCommand:(NSData *)audioData sampleRate:(int)sampleRate channel:(int)channel volume:(int)volume{
-//    NSLog(@"generate, %@", audioData);
+//    DDLogDebug(@"generate, %@", audioData);
     NSString *baseCommand = @"audio.input";
     NSString *srString = [NSString stringWithFormat:@"&samplerate=%d", sampleRate];
     NSString *chString = [NSString stringWithFormat:@"&channel=%d", channel];
@@ -209,7 +209,7 @@
 }
 
 + (NSData *)generateContinousAudioCommand:(int)sampleRate channel:(int)channel volume:(int)volume{
-    //    NSLog(@"generate, %@", audioData);
+    //    DDLogDebug(@"generate, %@", audioData);
     NSString *baseCommand = @"audio.input";
     NSString *ptString = @"?protocol=tcp";
     NSString *srString = [NSString stringWithFormat:@"&samplerate=%d", sampleRate];
@@ -244,7 +244,7 @@
     NSString *returnString = @"";
     for (NSString *s in array) {
         returnString = [returnString stringByAppendingString:s];
-        NSLog(@"apped string, %@", s);
+        DDLogDebug(@"apped string, %@", s);
     }
     return returnString;
 }

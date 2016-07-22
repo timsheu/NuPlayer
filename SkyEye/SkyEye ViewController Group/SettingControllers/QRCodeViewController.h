@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JHChainableAnimations.h"
 #import "QRCodeGenerator.h"
+#import "PlayerManager.h"
 @interface QRCodeViewController : UIViewController{
     NSString *localString;
     UIImage *localImage;

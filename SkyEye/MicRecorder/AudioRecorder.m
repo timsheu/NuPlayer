@@ -22,7 +22,7 @@ void AQOutputCallback(void *inUserData, AudioQueueRef queue, AudioQueueBufferRef
         AudioFileClose(recordStateQ->audioFile);
     }
     NSData *data = [NSData dataWithBytes:queueBuffer->mAudioData length:queueBuffer->mAudioDataBytesCapacity];
-    NSLog(@"%@", data);
+    DDLogDebug(@"%@", data);
     
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JHChainableAnimations.h"
 #import "QRCodeGenerator.h"
+#import "DVRPlayerManager.h"
 @interface DVRQRCodeViewController : UIViewController{
     NSString *localString;
     UIImage *localImage;

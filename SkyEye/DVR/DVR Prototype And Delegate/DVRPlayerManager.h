@@ -11,6 +11,9 @@
 #import "DVRWiFiInfo.h"
 #import "DVRSettingPool.h"
 #import "DVRFileNamePool.h"
+#import "Constants.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
 enum{
     SOCKET_READ_TAG_SEND_SETTING            = 5,
     SOCKET_READ_TAG_SET_PLUGIN              = 6,

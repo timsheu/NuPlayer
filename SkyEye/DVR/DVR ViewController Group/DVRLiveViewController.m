@@ -273,7 +273,7 @@
         [self playVideoViewWithPath:targetURL seekTime:0];
     }
     @catch (NSException *exception) {
-        NSLog(@"set data source failed");
+        DDLogDebug(@"set data source failed");
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Network Not Stable" message:@"Please Check Internet Connection and try again." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
         [alertView show];
         return;
@@ -315,7 +315,7 @@
     NSString *url = [dic objectForKey:@"URL"];
     NSArray *split = [url componentsSeparatedByString:@"/"];
     NSString *category = @"File List";
-    NSLog(@"split: %@", split);
+    DDLogDebug(@"split: %@", split);
     NSDictionary *commmandDic = [NSDictionary dictionaryWithObjectsAndKeys:key, @"Camera", @"Download File List", @"Category", @"N/A", @"Value", nil];
     NSString *command = [DVRCommandGenerator generateSettingCommandWithDictionary:commmandDic];
     [socketManager setTag:SOCKET_READ_TAG_CAMERA_1 commandCategory:category];
@@ -331,7 +331,7 @@
     NSDictionary *dic = [playerManager.dictionarySetting objectForKey:key];
     NSString *url = [dic objectForKey:@"URL"];
     NSArray *split = [url componentsSeparatedByString:@"/"];
-    NSLog(@"split: %@", split);
+    DDLogDebug(@"split: %@", split);
     NSDictionary *commmandDic = [NSDictionary dictionaryWithObjectsAndKeys:key, @"Camera", @"Download File List", @"Category", @"N/A", @"Value", nil];
     NSString *command = [DVRCommandGenerator generateSettingCommandWithDictionary:commmandDic];
     [socketManager setTag:serial commandCategory:category];

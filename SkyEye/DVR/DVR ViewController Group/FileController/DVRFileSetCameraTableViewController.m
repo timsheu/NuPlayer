@@ -114,7 +114,7 @@
 }
 
 -(void)refreshFileList{
-    NSLog(@"--refresing--");
+    DDLogDebug(@"--refresing--");
     [self downloadFileList];
 //    [self.refreshControl endRefreshing];
 }
@@ -127,7 +127,7 @@
     NSDictionary *dic = [playerManager.dictionarySetting objectForKey:key];
     NSString *url = [dic objectForKey:@"URL"];
     NSArray *split = [url componentsSeparatedByString:@"/"];
-    NSLog(@"split: %@", split);
+    DDLogDebug(@"split: %@", split);
     NSDictionary *commmandDic = [NSDictionary dictionaryWithObjectsAndKeys:key, @"Camera", @"Download File List", @"Category", @"N/A", @"Value", nil];
     NSString *command = [DVRCommandGenerator generateSettingCommandWithDictionary:commmandDic];
     [socketManager setTag:SOCKET_READ_TAG_CAMERA_1 commandCategory:key];
@@ -141,7 +141,7 @@
     NSDictionary *dic = [playerManager.dictionarySetting objectForKey:key];
     NSString *url = [dic objectForKey:@"URL"];
     NSArray *split = [url componentsSeparatedByString:@"/"];
-    NSLog(@"split: %@", split);
+    DDLogDebug(@"split: %@", split);
     NSDictionary *commmandDic = [NSDictionary dictionaryWithObjectsAndKeys:key, @"Camera", @"Download File List", @"Category", @"N/A", @"Value", nil];
     NSString *command = [DVRCommandGenerator generateSettingCommandWithDictionary:commmandDic];
     [socketManager setTag:serial commandCategory:key];

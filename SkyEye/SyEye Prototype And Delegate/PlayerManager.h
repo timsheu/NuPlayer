@@ -11,6 +11,8 @@
 #import "WiFiInfo.h"
 #import "SettingPool.h"
 #import "FileNamePool.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Constants.h"
 
 #ifndef USE_DFU_RTSP_PLAYER
 #define USE_DFU_RTSP_PLAYER
@@ -44,6 +46,8 @@ enum{
 
 @interface PlayerManager : NSObject{
     NSString *path, *settingPath;
+    DDFileLogger *fileLogger;
+
 }
 
 @property (strong, nonatomic) NSMutableDictionary *cameraAddress;
@@ -67,4 +71,6 @@ enum{
 
 - (BOOL)updateSettingPropertyList;
 - (void)resetData;
+- (NSString *)getCurrentLogFilePath;
+
 @end

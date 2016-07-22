@@ -104,6 +104,7 @@
 		563928091C92B48600717A2A /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563928061C92B48600717A2A /* LiveViewController.m */; };
 		5639280A1C92B48600717A2A /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563928081C92B48600717A2A /* StartPageViewController.m */; };
 		5639280E1C92BB2600717A2A /* DVRQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639280D1C92BB2600717A2A /* DVRQRCodeViewController.m */; };
+		565C25D71D4224BE00F9EE53 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 565C25D61D4224BE00F9EE53 /* Constants.m */; };
 		568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568CF8C81CAB7DB700A58490 /* libc++.tbd */; };
 		56955CEC1CC222530028E78C /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEA1CC222530028E78C /* Default-568h.png */; };
 		56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEB1CC222530028E78C /* Default-568h@2x.png */; };
@@ -304,6 +305,8 @@
 		5639280B1C92B5DC00717A2A /* SkyEye-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyEye-Bridging-Header.h"; sourceTree = "<group>"; };
 		5639280C1C92BB2600717A2A /* DVRQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DVRQRCodeViewController.h; path = "DVR/DVR ViewController Group/Setting Controller/DVRQRCodeViewController.h"; sourceTree = "<group>"; };
 		5639280D1C92BB2600717A2A /* DVRQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DVRQRCodeViewController.m; path = "DVR/DVR ViewController Group/Setting Controller/DVRQRCodeViewController.m"; sourceTree = "<group>"; };
+		565C25D51D4224BE00F9EE53 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		565C25D61D4224BE00F9EE53 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		568CF8C81CAB7DB700A58490 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		56955CEA1CC222530028E78C /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		56955CEB1CC222530028E78C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -671,6 +674,8 @@
 		569C53F61C801D990072D81B /* SettingControllers */ = {
 			isa = PBXGroup;
 			children = (
+				565C25D51D4224BE00F9EE53 /* Constants.h */,
+				565C25D61D4224BE00F9EE53 /* Constants.m */,
 				563927ED1C92B46D00717A2A /* HistoryTableView.h */,
 				563927EE1C92B46D00717A2A /* HistoryTableView.m */,
 				563927EF1C92B46D00717A2A /* MultipleSettingTableViewController.h */,
@@ -1019,6 +1024,7 @@
 				5639280A1C92B48600717A2A /* StartPageViewController.m in Sources */,
 				563927DD1C92B3CF00717A2A /* FileNamePool.m in Sources */,
 				562C71F11CE07DCD00DF6050 /* AudioRecorder.m in Sources */,
+				565C25D71D4224BE00F9EE53 /* Constants.m in Sources */,
 				5639280E1C92BB2600717A2A /* DVRQRCodeViewController.m in Sources */,
 				5639275F1C92B0BE00717A2A /* DVRSettingItemCellPrototype.m in Sources */,
 				5639275D1C92B0BE00717A2A /* DVRInfoItemCellPrototype.m in Sources */,

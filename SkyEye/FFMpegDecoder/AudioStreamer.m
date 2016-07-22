@@ -62,7 +62,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
 
 - (void)_startAudio
 {
-    NSLog(@"ready to start audio");
+    DDLogDebug(@"ready to start audio");
     if (started_) {
         AudioQueueStart(audioQueue_, NULL);
     } else {
@@ -125,7 +125,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
             audioStreamBasicDesc_.mBytesPerPacket = 0;
             audioStreamBasicDesc_.mBytesPerFrame = _audioCodecContext->frame_bits;
             audioStreamBasicDesc_.mReserved = 0;
-            NSLog(@"audio format %s (%d) is  supported",  _audioCodecContext->codec_descriptor->name, _audioCodecContext->codec_id);
+            DDLogDebug(@"audio format %s (%d) is  supported",  _audioCodecContext->codec_descriptor->name, _audioCodecContext->codec_id);
             
             break;
         }
@@ -144,7 +144,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
             audioStreamBasicDesc_.mBitsPerChannel = 8;
             audioStreamBasicDesc_.mBytesPerPacket = 1;
             audioStreamBasicDesc_.mBytesPerFrame = 1;
-            NSLog(@"found audio codec mulaw");
+            DDLogDebug(@"found audio codec mulaw");
             break;
         }
         case CODEC_ID_PCM_ALAW:
@@ -157,12 +157,12 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
             audioStreamBasicDesc_.mBitsPerChannel = 8;
             audioStreamBasicDesc_.mBytesPerPacket = 1;
             audioStreamBasicDesc_.mBytesPerFrame = 1;//_audioCodecContext->frame_bits;
-            NSLog(@"found audio codec alaw, %d", _audioCodecContext->frame_bits);
+            DDLogDebug(@"found audio codec alaw, %d", _audioCodecContext->frame_bits);
             break;
         }
         default:
         {
-            NSLog(@"Error: audio format '%s' (%d) is not supported", _audioCodecContext->codec_descriptor->name, _audioCodecContext->codec_id);
+            DDLogDebug(@"Error: audio format '%s' (%d) is not supported", _audioCodecContext->codec_descriptor->name, _audioCodecContext->codec_id);
             audioStreamBasicDesc_.mFormatID = kAudioFormatAC3;
             break;
         }
@@ -178,13 +178,13 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
     
     OSStatus status = AudioQueueNewOutput(&audioStreamBasicDesc_, audioQueueOutputCallback, (__bridge void*)self, NULL, NULL, 0, &audioQueue_);
     if (status != noErr) {
-      NSLog(@"Could not create new output.");
+      DDLogDebug(@"Could not create new output.");
       return NO;
     }
 
     status = AudioQueueAddPropertyListener(audioQueue_, kAudioQueueProperty_IsRunning, audioQueueIsRunningCallback, (__bridge void*)self);
     if (status != noErr) {
-      NSLog(@"Could not add propery listener. (kAudioQueueProperty_IsRunning)");
+      DDLogDebug(@"Could not add propery listener. (kAudioQueueProperty_IsRunning)");
       return NO;
     }
 
@@ -194,7 +194,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
                                                               _audioCodecContext->sample_rate * kAudioBufferSeconds / (_audioCodecContext->frame_size + 1),
                                                               &audioQueueBuffer_[i]);
       if (status != noErr) {
-        NSLog(@"Could not allocate buffer.");
+        DDLogDebug(@"Could not allocate buffer.");
         return NO;
       }
     }
@@ -290,7 +290,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
         if (buffer->mPacketDescriptionCount > 0) {
             status = AudioQueueEnqueueBuffer(audioQueue_, buffer, 0, NULL);
             if (status != noErr) {
-                NSLog(@"Could not enqueue buffer.");
+                DDLogDebug(@"Could not enqueue buffer.");
             }
         } else {
             AudioQueueStop(audioQueue_, NO);
@@ -313,7 +313,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
         started_ = YES;
       }
       else {
-        NSLog(@"Could not start audio queue.");
+        DDLogDebug(@"Could not start audio queue.");
       }
     }
 

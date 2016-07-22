@@ -6,7 +6,7 @@ target "SkyEye" do
 	pod 'iOS-QR-Code-Encoder', '~> 0.0.1'
 	pod 'CocoaLumberjack'
 	pod 'KSCrash', '~> 1.6'
-
+    pod 'CocoaLumberjack'
 end
 
 post_install do |installer_representation|

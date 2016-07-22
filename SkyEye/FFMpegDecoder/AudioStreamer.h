@@ -2,6 +2,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import "RTSPPlayer.h"
+#import "PlayerManager.h"
 
 #define kNumAQBufs 3
 #define kAudioBufferSeconds 3

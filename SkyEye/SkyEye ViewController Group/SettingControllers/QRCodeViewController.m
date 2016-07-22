@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     UIImage *image = [QRCodeGenerator qrImageForString:localString imageSize:self.view.bounds.size.width];
     [_imageQRCode setImage:image];
-    NSLog(@"viewdidload: image view width: %f", _imageQRCode.bounds.size.width);
+    DDLogDebug(@"viewdidload: image view width: %f", _imageQRCode.bounds.size.width);
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Image.png"];
     
@@ -34,7 +34,7 @@
 
 - (void)setImage:(UIImage *)image{
     localImage = image;
-    NSLog(@"image view width: %f", _imageQRCode.bounds.size.width);
+    DDLogDebug(@"image view width: %f", _imageQRCode.bounds.size.width);
 }
 - (void)setString:(NSString *)string{
     localString = [NSString stringWithString:string];

@@ -22,7 +22,7 @@
     [email addConditionalAlertWithTitle:@"Crash Detected" message:@"The APP crashed last time it was launched. Send a crash report!" yesAnswer:@"Okay!" noAnswer:@"No thanks."];
     [email install];
     [email sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
-        NSLog(@"test");
+        DDLogDebug(@"test");
     }];
     return YES;
 }

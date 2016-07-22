@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DVRPlayerManager.h"
 @interface DVRCommandParser : NSObject{
     NSMutableDictionary *dictionaryCommandList;
     NSArray *arrayCommandName, *arrayCommandContent;

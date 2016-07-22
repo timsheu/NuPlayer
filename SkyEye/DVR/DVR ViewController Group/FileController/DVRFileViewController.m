@@ -108,7 +108,7 @@
 }
 
 - (void)hostNotResponse{
-    NSLog(@"=====host not response=====");
+    DDLogDebug(@"=====host not response=====");
 //    [self connectToHost];
 }
 
@@ -125,7 +125,7 @@
     NSDictionary *dic = [playerManager.dictionarySetting objectForKey:key];
     NSString *url = [dic objectForKey:@"URL"];
     NSArray *split = [url componentsSeparatedByString:@"/"];
-    NSLog(@"split: %@", split);
+    DDLogDebug(@"split: %@", split);
     NSDictionary *commmandDic = [NSDictionary dictionaryWithObjectsAndKeys:key, @"Camera", @"Download File List", @"Category", @"N/A", @"Value", nil];
     NSString *command = [DVRCommandGenerator generateSettingCommandWithDictionary:commmandDic];
     [socketManager setTag:serial commandCategory:key];

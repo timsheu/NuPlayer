@@ -40,7 +40,7 @@
 -(void)viewDidDisappear:(BOOL)animated{
     [self updateAllSettingData];
     BOOL update = [[DVRPlayerManager sharedInstance] updateSettingPropertyList];
-    NSLog(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
+    DDLogDebug(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -290,7 +290,7 @@
     for (NSString *s in array) {
         qrString = [qrString stringByAppendingString:s];
     }
-    NSLog(@"qr String: %@", qrString);
+    DDLogDebug(@"qr String: %@", qrString);
     qrCodeString = [NSString stringWithString:qrString];
     NSString *identifier = @"QRCodeSegue";
     [self performSegueWithIdentifier:identifier sender:self];
@@ -477,12 +477,12 @@
 
 -(NSDictionary *)getSSID{
     NSArray *interfaces = (__bridge_transfer NSArray *) CNCopySupportedInterfaces();
-    NSLog(@"Supported interfaces :%@", interfaces);
+    DDLogDebug(@"Supported interfaces :%@", interfaces);
     
     NSDictionary *info;
     for (NSString *interfaceName in interfaces) {
         info = (__bridge_transfer NSDictionary *)CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName);
-        NSLog(@"%@ => %@", interfaceName, info);
+        DDLogDebug(@"%@ => %@", interfaceName, info);
         if (info && [info count] ) {
             break;
         }
@@ -518,7 +518,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     [_historyPicker setHidden:YES];
-    NSLog(@"touches began");
+    DDLogDebug(@"touches began");
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -537,7 +537,7 @@
     [dic setObject:category forKey:@"Category"];
     [dic setObject:value forKey:@"Value"];
     NSString *generatedCommand = [NSString stringWithString:[DVRCommandGenerator generateSettingCommandWithDictionary:dic]];
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     [socketManager sendCommand:generatedCommand toCamera:receivedString withTag:SOCKET_READ_TAG_SEND_SETTING];
 }
 
@@ -552,7 +552,7 @@
         generatedCommand = [NSString stringWithString:[DVRCommandGenerator generateInfoCommandWithName:@"Record Status"]];
     }
     tag = SOCKET_READ_TAG_INFO_STATUS;
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     socketManager = [DVRSocketManager shareInstance];
     [socketManager sendCommand:generatedCommand toCamera:@"Setup DVR" withTag:tag];
 }
@@ -562,7 +562,7 @@
     generatedCommand = [NSString stringWithString:[DVRCommandGenerator generateInfoCommandWithName:@"Get Resolution"]];
     int tag;
     tag = SOCKET_READ_TAG_STATUS_RESOLUTION;
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     socketManager = [DVRSocketManager shareInstance];
     [socketManager sendCommand:generatedCommand toCamera:@"Setup DVR" withTag:tag];
 }
@@ -570,7 +570,7 @@
 
 -(void)sendRebootSystemCommand{
     NSString *generatedCommand = [NSString stringWithString:[DVRCommandGenerator generateInfoCommandWithName:@"Reboot System"]];
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     [socketManager sendCommand:generatedCommand toCamera:@"Setup DVR" withTag:SOCKET_READ_TAG_INFO_REBOOT];
 }
 
