@@ -471,19 +471,45 @@
     
     isPlaying = NO;
 }
+- (void)startRecordVoiceHalfDuplex:(id)sender{
+    audioRecorder = [AudioRecorder sharedInstance];
+    audioRecorder.delegate = self;
+    audioRecorder.cameraSerial = [NSString stringWithFormat:@"Setup Camera %@", cameraString];
+    NSDictionary *dic = [PlayerManager.sharedInstance dictionarySetting];
+    NSDictionary *cameraDic = [dic objectForKey:audioRecorder.cameraSerial];
+    NSString *isDuplex = [cameraDic objectForKey:@"Audio Duplex"];
+    if ([isDuplex isEqualToString:@"Half-Duplex"]) {
+        [audioRecorder startRecording];
+        [_outletMicButton setImage:[UIImage imageNamed:@"mic"] forState:UIControlStateNormal];
+        [self.view makeToast:@"Two-way talking started." duration:1.5 position:CSToastPositionCenter];
+    }
+}
 
 - (void)startRecordVoice:(id)sender{
     audioRecorder = [AudioRecorder sharedInstance];
     audioRecorder.delegate = self;
     audioRecorder.cameraSerial = [NSString stringWithFormat:@"Setup Camera %@", cameraString];
-    if ([audioRecorder isRecording]) {
-        [audioRecorder stopRecording];
-//        [audioRecorder stopPlayback];
-        [_outletMicButton setImage:[UIImage imageNamed:@"mic-mute"] forState:UIControlStateNormal];
+    NSDictionary *dic = [PlayerManager.sharedInstance dictionarySetting];
+    NSDictionary *cameraDic = [dic objectForKey:audioRecorder.cameraSerial];
+    NSString *isDuplex = [cameraDic objectForKey:@"Audio Duplex"];
+    DDLogDebug(@"isDuplex: %@", isDuplex);
+    
+    if ([isDuplex isEqualToString:@"Duplex"]) {
+        if ([audioRecorder isRecording]) {
+            [self.view makeToast:@"Two-way talking ends." duration:1.5 position:CSToastPositionCenter];
+            [audioRecorder stopRecording];
+            [_outletMicButton setImage:[UIImage imageNamed:@"mic-mute"] forState:UIControlStateNormal];
+        }else{
+            [audioRecorder startRecording];
+            [_outletMicButton setImage:[UIImage imageNamed:@"mic"] forState:UIControlStateNormal];
+            [self.view makeToast:@"Two-way talking started." duration:1.5 position:CSToastPositionCenter];
+        }
     }else{
-        [audioRecorder startRecording];
-//        [audioRecorder startPlayback];
-        [_outletMicButton setImage:[UIImage imageNamed:@"mic"] forState:UIControlStateNormal];
+        if ([audioRecorder isRecording]) {
+            [self.view makeToast:@"Two-way talking ends." duration:1.5 position:CSToastPositionCenter];
+            [audioRecorder stopRecording];
+            [_outletMicButton setImage:[UIImage imageNamed:@"mic-mute"] forState:UIControlStateNormal];
+        }
     }
 }
 

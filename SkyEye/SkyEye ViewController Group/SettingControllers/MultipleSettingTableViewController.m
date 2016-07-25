@@ -24,7 +24,7 @@
         [receivedString isEqualToString:@"Setup Camera 2"] ||
         [receivedString isEqualToString:@"Setup Camera 3"] ||
         [receivedString isEqualToString:@"Setup Camera 4"]) {
-        rowOfTable = 14;
+        rowOfTable = 15;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 3;
     } else if ([receivedString isEqualToString:@"Device Mic"] ||
@@ -281,6 +281,21 @@
                 break;
             case 11:
                 [label setHidden:NO];
+                [control setHidden:NO];
+                controlDuplex = control;
+                dic = [manager.dictionarySetting objectForKey:receivedString];
+                label.text = @"Audio Duplex";
+                [controlDuplex removeSegmentAtIndex:3 animated:NO];
+                [controlDuplex removeSegmentAtIndex:2 animated:NO];
+                [controlDuplex setTitle:@"Half-Duplex" forSegmentAtIndex:0];
+                [controlDuplex setTitle:@"Duplex" forSegmentAtIndex:1];
+                controlDuplex.selectedSegmentIndex = 1;
+                if ([[dic objectForKey:@"Audio Duplex"] isEqualToString:@"Half-Duplex"]) {
+                    controlDuplex.selectedSegmentIndex = 0;
+                }
+                break;
+            case 12:
+                [label setHidden:NO];
                 label.text = @"Recorder Status";
                 if ([[dic objectForKey:@"Recorder Status"] isEqualToString:@"1"]) {
                     labelInfo.text = @"Recording";
@@ -289,14 +304,14 @@
                 }
                 [labelInfo setHidden:NO];
                 break;
-            case 12:
+            case 13:
                 [label setHidden:NO];
                 label.text = @"Reboot System";
                 rebootButton = button;
                 [rebootButton setTitle:@"Reboot" forState:UIControlStateNormal];
                 [rebootButton setHidden:NO];
                 break;
-            case 13:
+            case 14:
                 [label setHidden:NO];
                 label.text = @"Report";
                 [button setHidden:NO];
@@ -529,6 +544,14 @@
             NSString *string = @"TCP";
             [dic setObject:string forKey:@"Transmission"];
         }
+    } else if ([control isEqual:controlDuplex]){
+        PlayerManager *manager = [PlayerManager sharedInstance];
+        NSMutableDictionary *dic = [manager.dictionarySetting objectForKey:receivedString];
+        NSString *string = @"Duplex";
+        if (control.selectedSegmentIndex == 0) {
+            string = @"Half-Duplex";
+        }
+        [dic setObject:string forKey:@"Audio Duplex"];
     }
 }
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

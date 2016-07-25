@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A6B70C7C7EB9DB0CB622BB749DDB59D1'
-               BlueprintName = 'Pods-SkyEye'
+               BlueprintIdentifier = '9A61C00D992ED49832DFC7B59BA880DE'
+               BlueprintName = 'Toast'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-SkyEye.a'>
+               BuildableName = 'libToast.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>iOS-QR-Code-Encoder.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0B158BCFD927E0FE2B6F26E2A3DF0ED</key>
+		<key>9A61C00D992ED49832DFC7B59BA880DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6B70C7C7EB9DB0CB622BB749DDB59D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

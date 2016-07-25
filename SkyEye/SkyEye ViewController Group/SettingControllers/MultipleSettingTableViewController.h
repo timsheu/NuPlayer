@@ -38,7 +38,7 @@ alpha:1.0]
     UILabel *labelQualityValue, *labelBitRateValue, *labelFPSValue;
     UISlider *sliderQuality, *sliderFPS;
     UITextField *textfieldName, *textfieldURL, *textfieldSSID, *textfieldPASS, *textfieldPort;
-    UISegmentedControl *controlResolution, *controlDeviceMute, *controlPhoneMute, *controlAdaptive, *controlTransmission, *controlFixedBitrate, *controlFixedQuality;
+    UISegmentedControl *controlResolution, *controlDeviceMute, *controlPhoneMute, *controlAdaptive, *controlTransmission, *controlFixedBitrate, *controlFixedQuality, *controlDuplex;
     UIButton *rebootButton, *resetButton, *qrButton, *sendReportButton;
     UIStepper *stepperBitRate;
     NSString *sliderSavedValue;

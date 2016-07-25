@@ -7,6 +7,7 @@ target "SkyEye" do
 	pod 'CocoaLumberjack'
 	pod 'KSCrash', '~> 1.6'
     pod 'CocoaLumberjack'
+    pod 'Toast', '~> 3.0'
 end
 
 post_install do |installer_representation|

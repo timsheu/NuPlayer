@@ -14,6 +14,7 @@
 #import "MultipleSettingTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AudioRecorder.h"
+#import "UIView+Toast.h"
 
 #ifdef USE_DFU_RTSP_PLAYER
 #import "RTSPPlayer.h"
@@ -87,4 +88,5 @@ enum {
 - (IBAction)actionSeekTime:(id)sender;
 - (IBAction)actionBackToMain:(id)sender;
 - (IBAction)startRecordVoice:(id)sender;
+- (IBAction)startRecordVoiceHalfDuplex:(id)sender;
 @end

@@ -10,6 +10,8 @@
 	<dict>
 		<key>port</key>
 		<string>8000</string>
+		<key>Audio Duplex</key>
+		<string>Duplex</string>
 		<key>Adaptive</key>
 		<string>-1</string>
 		<key>Fixed Quality</key>
@@ -63,6 +65,8 @@
 	<dict>
 		<key>port</key>
 		<string>8000</string>
+		<key>Audio Duplex</key>
+		<string>Duplex</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Fixed Bit Rate</key>
@@ -109,6 +113,8 @@
 	<dict>
 		<key>port</key>
 		<string>8000</string>
+		<key>Audio Duplex</key>
+		<string>Duplex</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Adaptive</key>
@@ -155,6 +161,8 @@
 	<dict>
 		<key>port</key>
 		<string>8000</string>
+		<key>Audio Duplex</key>
+		<string>Duplex</string>
 		<key>Fixed Quality</key>
 		<string>-1</string>
 		<key>Adaptive</key>
