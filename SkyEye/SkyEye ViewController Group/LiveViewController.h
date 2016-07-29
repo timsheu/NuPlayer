@@ -24,6 +24,8 @@
 #define TAG_OF_GESTURE 100;
 
 @interface LiveViewController : UIViewController <UITabBarDelegate, SocketManagerDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate, AudioRecorderDelegate>{
+    UIColor *backgroundImage;
+    NSString *resolution;
     BOOL hideUIFlag;
     BOOL hideSliderFlag;
     BOOL isFullScreen;
@@ -71,15 +73,10 @@ enum {
 @property (weak, nonatomic) IBOutlet UIView *outletLiveView;
 @property (weak, nonatomic) IBOutlet UIView *outletPlayerControlView;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *outletTapGesture;
-@property (weak, nonatomic) IBOutlet UITabBarItem *outletCam1TabItem;
-@property (weak, nonatomic) IBOutlet UITabBarItem *outletCam2TabItem;
-@property (weak, nonatomic) IBOutlet UITabBarItem *outletCam3TabItem;
-@property (weak, nonatomic) IBOutlet UITabBarItem *outletCam4TabItem;
 @property (weak, nonatomic) IBOutlet UIButton *outletSnapshotButton;
 @property (weak, nonatomic) IBOutlet UIButton *outletExpandButton;
 @property (weak, nonatomic) IBOutlet UIButton *outletPlayButton;
 @property (weak, nonatomic) IBOutlet UISlider *outletSeekSlider;
-@property (weak, nonatomic) IBOutlet UITabBar *outletCamTabBar;
 //action access point
 - (IBAction)buttonSnapshot:(id)sender;
 - (IBAction)buttonPlay:(id)sender;

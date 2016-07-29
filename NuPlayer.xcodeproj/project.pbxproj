@@ -124,10 +124,11 @@
 		56EA39941D2E5528008EF6FB /* platform.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56EA398F1D2E5528008EF6FB /* platform.jpg */; };
 		56EA39951D2E5528008EF6FB /* select.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56EA39901D2E5528008EF6FB /* select.jpg */; };
 		56EA39961D2E5528008EF6FB /* settings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56EA39911D2E5528008EF6FB /* settings.jpg */; };
-		56EA39971D2E5528008EF6FB /* streaming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56EA39921D2E5528008EF6FB /* streaming.jpg */; };
 		56FA66C61CB65CED0004DB32 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA66C11CB65CED0004DB32 /* AudioStreamer.m */; };
 		56FA66C71CB65CED0004DB32 /* RTSPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA66C31CB65CED0004DB32 /* RTSPPlayer.m */; };
 		56FAC2971CDC97FB00F6D190 /* MicRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FAC2961CDC97FB00F6D190 /* MicRecorder.m */; };
+		56FE04511D4B4CD800760A37 /* streaming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56FE04501D4B4CD800760A37 /* streaming.jpg */; };
+		56FE04531D4B4CE500760A37 /* duplex.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FE04521D4B4CE500760A37 /* duplex.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -329,13 +330,14 @@
 		56EA398F1D2E5528008EF6FB /* platform.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = platform.jpg; sourceTree = "<group>"; };
 		56EA39901D2E5528008EF6FB /* select.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = select.jpg; sourceTree = "<group>"; };
 		56EA39911D2E5528008EF6FB /* settings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = settings.jpg; sourceTree = "<group>"; };
-		56EA39921D2E5528008EF6FB /* streaming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = streaming.jpg; sourceTree = "<group>"; };
 		56FA66C01CB65CED0004DB32 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		56FA66C11CB65CED0004DB32 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		56FA66C21CB65CED0004DB32 /* RTSPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSPPlayer.h; sourceTree = "<group>"; };
 		56FA66C31CB65CED0004DB32 /* RTSPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSPPlayer.m; sourceTree = "<group>"; };
 		56FAC2951CDC97FB00F6D190 /* MicRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MicRecorder.h; path = MicRecorder/MicRecorder.h; sourceTree = "<group>"; };
 		56FAC2961CDC97FB00F6D190 /* MicRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MicRecorder.m; path = MicRecorder/MicRecorder.m; sourceTree = "<group>"; };
+		56FE04501D4B4CD800760A37 /* streaming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = streaming.jpg; sourceTree = "<group>"; };
+		56FE04521D4B4CE500760A37 /* duplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duplex.png; sourceTree = "<group>"; };
 		710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -720,11 +722,12 @@
 		56EA39551D2DF725008EF6FB /* TrailerView */ = {
 			isa = PBXGroup;
 			children = (
+				56FE04501D4B4CD800760A37 /* streaming.jpg */,
+				56FE04521D4B4CE500760A37 /* duplex.png */,
 				56EA398E1D2E5528008EF6FB /* files.jpg */,
 				56EA398F1D2E5528008EF6FB /* platform.jpg */,
 				56EA39901D2E5528008EF6FB /* select.jpg */,
 				56EA39911D2E5528008EF6FB /* settings.jpg */,
-				56EA39921D2E5528008EF6FB /* streaming.jpg */,
 				56EA396D1D2E23C8008EF6FB /* TrailerContentViewController.h */,
 				56EA396E1D2E23C8008EF6FB /* TrailerContentViewController.m */,
 			);
@@ -912,7 +915,6 @@
 				563927B21C92B2C500717A2A /* QRCodePropertyList.plist in Resources */,
 				563927471C92AED200717A2A /* DVRRecordCommandPropertyList.plist in Resources */,
 				563927431C92AED200717A2A /* DVRInfoPropertyList.plist in Resources */,
-				56EA39971D2E5528008EF6FB /* streaming.jpg in Resources */,
 				563927AF1C92B2C500717A2A /* InfoPropertyList.plist in Resources */,
 				563927491C92AED200717A2A /* DVRSystemCommandPropertyList.plist in Resources */,
 				563927AB1C92B2C500717A2A /* AudioCommandPropertyList.plist in Resources */,
@@ -924,6 +926,7 @@
 				563927B41C92B2C500717A2A /* SettingsPropertyList.plist in Resources */,
 				561E84391C4C848A00B62BCF /* LaunchScreen.storyboard in Resources */,
 				563927B51C92B2C500717A2A /* SystemCommandPropertyList.plist in Resources */,
+				56FE04511D4B4CD800760A37 /* streaming.jpg in Resources */,
 				56EA39951D2E5528008EF6FB /* select.jpg in Resources */,
 				563927AC1C92B2C500717A2A /* ConfigCommandPropertyList.plist in Resources */,
 				56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */,
@@ -937,6 +940,7 @@
 				563927481C92AED200717A2A /* DVRSettingsPropertyList.plist in Resources */,
 				563927B11C92B2C500717A2A /* MulticastCommandPropertyList.plist in Resources */,
 				563927451C92AED200717A2A /* DVRMulticastCommandPropertyList.plist in Resources */,
+				56FE04531D4B4CE500760A37 /* duplex.png in Resources */,
 				563927411C92AED200717A2A /* DVRFileCommandPropertyList.plist in Resources */,
 				563927421C92AED200717A2A /* DVRFileNamePropertyList.plist in Resources */,
 				563927B31C92B2C500717A2A /* RecordCommandPropertyList.plist in Resources */,

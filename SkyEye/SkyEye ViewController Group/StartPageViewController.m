@@ -12,8 +12,8 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [[self navigationController]setNavigationBarHidden:YES animated:NO];
-    _pageTitles = @[@"Select Platform!", @"Select Camera!", @"Start Streaming!", @"Play Files!", @"Do Settings!"];
-    _pageImages = @[@"platform.jpg", @"select.jpg", @"streaming.jpg", @"files.jpg", @"settings.jpg"];
+    _pageTitles = @[@"Select Platform!", @"Select Camera!", @"Start Streaming!", @"Play Files!", @"Do Settings!", @"New Setting !"];
+    _pageImages = @[@"platform.jpg", @"select.jpg", @"streaming.jpg", @"files.jpg", @"settings.jpg", @"duplex.png"];
     PlayerManager *manager = [PlayerManager sharedInstance];
     NSString *didTutorial = [manager.dictionarySetting objectForKey:@"DidTutorial"];
     if ([didTutorial isEqualToString:@"NO"]) {
@@ -46,7 +46,7 @@
         return nil;
     }
     index++;
-    if (index == 5) {
+    if (index == 6) {
         [controller.dismissButtonOutlet setHidden:NO];
         controller.delegate = self;
     }

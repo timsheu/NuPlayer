@@ -287,8 +287,8 @@
                 label.text = @"Audio Duplex";
                 [controlDuplex removeSegmentAtIndex:3 animated:NO];
                 [controlDuplex removeSegmentAtIndex:2 animated:NO];
-                [controlDuplex setTitle:@"Half-Duplex" forSegmentAtIndex:0];
-                [controlDuplex setTitle:@"Duplex" forSegmentAtIndex:1];
+                [controlDuplex setTitle:@"Half" forSegmentAtIndex:0];
+                [controlDuplex setTitle:@"Full" forSegmentAtIndex:1];
                 controlDuplex.selectedSegmentIndex = 1;
                 if ([[dic objectForKey:@"Audio Duplex"] isEqualToString:@"Half-Duplex"]) {
                     controlDuplex.selectedSegmentIndex = 0;

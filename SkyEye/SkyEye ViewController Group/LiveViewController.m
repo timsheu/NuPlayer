@@ -38,7 +38,6 @@
     _outletSnapshotResult.layer.masksToBounds = YES;
     _outletSnapshotResult.layer.cornerRadius = 5.0;
     _outletSnapshotResult.alpha = 0;
-    [_outletCamTabBar setHidden:YES];
     // Do any additional setup after loading the view.
     queue = dispatch_queue_create("com.dispatch.video", DISPATCH_QUEUE_SERIAL);
 }
@@ -174,12 +173,7 @@
     hideUIFlag = localHideUIFlag;
     int side = 1;//1 is up, 0 is down
     (localHideUIFlag == YES) ? (side = -1) : (side = 1);
-    int uiHeightToBound = _outletCamTabBar.bounds.origin.y + _outletCamTabBar.bounds.size.height + 20;
-    _outletCamTabBar.transformY(side*uiHeightToBound).easeIn.delay(0.1).animate(0.3).animationCompletion =
-    JHAnimationCompletion(){
-        _outletTapGesture.enabled = YES;
-    };
-    uiHeightToBound = self.tabBarController.tabBar.bounds.origin.y + self.tabBarController.tabBar.bounds.size.height;
+    int uiHeightToBound = self.tabBarController.tabBar.bounds.origin.y + self.tabBarController.tabBar.bounds.size.height;
     self.tabBarController.tabBar.transformY(-1*side*uiHeightToBound).easeIn.delay(0.1).animate(0.3);
     [self.navigationController setNavigationBarHidden:localHideUIFlag animated:YES];
 }
@@ -225,6 +219,7 @@
         default:
             break;
     }
+    [self determineResolution];
 }
 
 
@@ -236,16 +231,23 @@
         [dotTimer invalidate];
         [_outletPlayButton setEnabled:YES];
         [_video closeAudio];
+        _outletLiveView.backgroundColor = [UIColor blackColor];
+        _outletOffline.text = @"OFFLINE";
         return;
     }
     if (checkTimer != nil) {
         [checkTimer invalidate];
         checkTimer = nil;
     }
-    _video.outputWidth = _outletLiveView.bounds.size.width;
-    _video.outputHeight = _outletLiveView.bounds.size.height;
+//    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
+
+//    [self determineResolution];
+//    _video.outputWidth = _outletLiveView.bounds.size.width;
+//    _video.outputHeight = _outletLiveView.bounds.size.height;
     dispatch_async(dispatch_get_main_queue(), ^{
-        _outletLiveView.backgroundColor = [UIColor colorWithPatternImage:_video.currentImage];
+        backgroundImage = [UIColor colorWithPatternImage:_video.currentImage];
+        _outletLiveView.backgroundColor = backgroundImage;
+        
         [_outletPlayButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
         isPlaying = YES;
         [outletBuffering stopAnimating];
@@ -257,12 +259,30 @@
     });
 }
 
+- (void)determineResolution{
+    float ratio = 1.33f;
+    float viewWidth = _outletLiveView.frame.size.width;
+    float viewHeight = _outletLiveView.frame.size.width / ratio;
+//    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
+    if (resolution.intValue > 2) {
+        ratio = 1.67f;
+        viewHeight = _outletLiveView.frame.size.width / ratio;
+    }
+    if (self.view.frame.size.height <= _outletLiveView.frame.size.height) {
+        viewWidth = viewHeight * ratio;
+    }
+    [_outletLiveView setFrame:CGRectMake(_outletLiveView.frame.origin.x, _outletLiveView.frame.origin.y, viewWidth, viewHeight)];
+    _video.outputWidth = (int) _outletLiveView.frame.size.width;
+    _video.outputHeight = (int) _outletLiveView.frame.size.height;
+}
+
 - (void)initCamera:(int)cameraSerial{
     PlayerManager* manager = [PlayerManager sharedInstance];
     NSString *string = [NSString stringWithFormat:@"Setup Camera %d", cameraSerial];
     NSMutableDictionary *dic = manager.dictionarySetting;
     NSMutableDictionary *cameraDic = [dic objectForKey:string];
     NSString *url = [cameraDic objectForKey:@"URL"];
+    resolution = [cameraDic objectForKey:@"Resolution"];
     [outletBuffering startAnimating];
     targetURL = url;
     @try {
@@ -463,6 +483,9 @@
 //            [NSThread sleepForTimeInterval:palFrame];
 //        }
 //    });
+    backgroundImage = [UIColor whiteColor];
+    _outletLiveView.contentMode = UIViewContentModeScaleAspectFit;
+    _outletLiveView.clipsToBounds = YES;
     playTimer = [NSTimer scheduledTimerWithTimeInterval:palFrame
                                                  target:self
                                                selector:@selector(displayLiveNextFrame:)

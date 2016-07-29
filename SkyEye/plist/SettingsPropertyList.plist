@@ -9,7 +9,7 @@
 	<key>Setup Camera 1</key>
 	<dict>
 		<key>port</key>
-		<string>8000</string>
+		<string>80</string>
 		<key>Audio Duplex</key>
 		<string>Duplex</string>
 		<key>Adaptive</key>
@@ -64,7 +64,7 @@
 	<key>Setup Camera 2</key>
 	<dict>
 		<key>port</key>
-		<string>8000</string>
+		<string>80</string>
 		<key>Audio Duplex</key>
 		<string>Duplex</string>
 		<key>Fixed Quality</key>
@@ -112,7 +112,7 @@
 	<key>Setup Camera 3</key>
 	<dict>
 		<key>port</key>
-		<string>8000</string>
+		<string>80</string>
 		<key>Audio Duplex</key>
 		<string>Duplex</string>
 		<key>Fixed Quality</key>
@@ -160,7 +160,7 @@
 	<key>Setup Camera 4</key>
 	<dict>
 		<key>port</key>
-		<string>8000</string>
+		<string>80</string>
 		<key>Audio Duplex</key>
 		<string>Duplex</string>
 		<key>Fixed Quality</key>
