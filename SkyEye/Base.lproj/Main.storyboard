@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j6i-hj-sAW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j6i-hj-sAW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,55 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-B5-N5w">
-                                <rect key="frame" x="147" y="203" width="307" height="194"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YtA-A9-KzE">
-                                        <rect key="frame" x="171" y="8" width="128" height="178"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g00-ou-mAq">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                <state key="normal" image="cam">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="tT1-BE-bUW" kind="show" id="QBH-Xa-S6I"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DVR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyc-LH-go5">
-                                                <rect key="frame" x="8" y="140" width="112" height="25"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                                <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-Ga-zwx">
-                                        <rect key="frame" x="8" y="8" width="128" height="178"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snp-nL-2cc">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                <state key="normal" image="drone">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="D90-Yc-jY6" kind="show" id="7aK-0g-JlQ"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SkyEye" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-Xj-24W">
-                                                <rect key="frame" x="8" y="140" width="112" height="25"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                                <color key="textColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="G3j-yk-k2L"/>
-                                    <constraint firstAttribute="height" constant="194" id="azQ-1t-V2n"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG8-d5-NYY">
                                 <rect key="frame" x="200" y="530" width="200" height="30"/>
                                 <constraints>
@@ -83,7 +34,7 @@
                                     <action selector="showTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mEo-nq-1p2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1.8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-aa-B6R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1.9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-aa-B6R">
                                 <rect key="frame" x="233" y="405" width="134" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="Fbe-zr-iul"/>
@@ -103,6 +54,99 @@
                                 <color key="textColor" red="0.058823529411764705" green="0.29019607843137257" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-B5-N5w">
+                                <rect key="frame" x="0.0" y="203" width="600" height="194"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-Ga-zwx">
+                                        <rect key="frame" x="96" y="8" width="128" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snp-nL-2cc">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <state key="normal" image="drone">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="D90-Yc-jY6" kind="show" id="7aK-0g-JlQ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SkyEye" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7v-Xj-24W">
+                                                <rect key="frame" x="8" y="140" width="112" height="25"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                                <color key="textColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="178" id="pfl-4Q-Tld"/>
+                                            <constraint firstAttribute="width" constant="128" id="vSh-Yl-cIx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtA-A9-KzE">
+                                        <rect key="frame" x="376" y="8" width="128" height="178"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DVR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyc-LH-go5">
+                                                <rect key="frame" x="8" y="140" width="112" height="25"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                                <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g00-ou-mAq">
+                                                <rect key="frame" x="-1" y="0.0" width="128" height="128"/>
+                                                <state key="normal" image="cam">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="tT1-BE-bUW" kind="show" id="QBH-Xa-S6I"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="178" id="RsO-6T-JyQ"/>
+                                            <constraint firstAttribute="width" constant="128" id="hRe-4c-L1l"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-Ww-hBQ">
+                                        <rect key="frame" x="236" y="8" width="128" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEk-Vb-GBA">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <state key="normal" image="50fps">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50FPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmt-jk-4fg">
+                                                <rect key="frame" x="8" y="140" width="112" height="25"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                                <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="NAl-kM-lW1"/>
+                                            <constraint firstAttribute="height" constant="178" id="y72-g3-fRT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YtA-A9-KzE" firstAttribute="leading" secondItem="B7s-Ww-hBQ" secondAttribute="trailing" constant="12" id="CuU-Fo-8fK"/>
+                                    <constraint firstAttribute="width" constant="307" id="G3j-yk-k2L"/>
+                                    <constraint firstItem="D7e-Ga-zwx" firstAttribute="top" secondItem="B7s-Ww-hBQ" secondAttribute="bottom" constant="-178" id="IOH-v3-FIh"/>
+                                    <constraint firstItem="B7s-Ww-hBQ" firstAttribute="centerY" secondItem="xiX-B5-N5w" secondAttribute="centerY" id="IV4-ag-14q"/>
+                                    <constraint firstItem="YtA-A9-KzE" firstAttribute="centerY" secondItem="B7s-Ww-hBQ" secondAttribute="centerY" id="PE0-LX-Ha6"/>
+                                    <constraint firstItem="B7s-Ww-hBQ" firstAttribute="leading" secondItem="D7e-Ga-zwx" secondAttribute="trailing" constant="12" id="S4x-9c-Jvn"/>
+                                    <constraint firstItem="B7s-Ww-hBQ" firstAttribute="centerX" secondItem="xiX-B5-N5w" secondAttribute="centerX" id="V7P-1m-q1w"/>
+                                    <constraint firstItem="D7e-Ga-zwx" firstAttribute="centerY" secondItem="xiX-B5-N5w" secondAttribute="centerY" id="Vw2-Mg-hsu"/>
+                                    <constraint firstAttribute="height" constant="194" id="azQ-1t-V2n"/>
+                                    <constraint firstItem="D7e-Ga-zwx" firstAttribute="leading" secondItem="xiX-B5-N5w" secondAttribute="leading" constant="8" id="qsA-Rm-OVp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G3j-yk-k2L"/>
+                                        <exclude reference="IOH-v3-FIh"/>
+                                        <exclude reference="qsA-Rm-OVp"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -114,6 +158,7 @@
                             <constraint firstItem="CG8-d5-NYY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzh-na-Rui"/>
                             <constraint firstItem="xiX-B5-N5w" firstAttribute="top" secondItem="ivm-nb-Kdk" secondAttribute="bottom" id="gMk-8X-8hW"/>
                             <constraint firstItem="xiX-B5-N5w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oDc-lQ-qE7"/>
+                            <constraint firstItem="xiX-B5-N5w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="p5A-xY-fkL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CG8-d5-NYY" secondAttribute="bottom" constant="40" id="stk-jC-P1Y"/>
                         </constraints>
                     </view>
@@ -2046,6 +2091,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="50fps" width="128" height="128"/>
         <image name="cam" width="128" height="128"/>
         <image name="drone" width="128" height="128"/>
         <image name="expand" width="64" height="64"/>
