@@ -129,6 +129,13 @@
 		56FAC2971CDC97FB00F6D190 /* MicRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FAC2961CDC97FB00F6D190 /* MicRecorder.m */; };
 		56FE04511D4B4CD800760A37 /* streaming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 56FE04501D4B4CD800760A37 /* streaming.jpg */; };
 		56FE04531D4B4CE500760A37 /* duplex.png in Resources */ = {isa = PBXBuildFile; fileRef = 56FE04521D4B4CE500760A37 /* duplex.png */; };
+		A88814511D991CF5000D786B /* kxmovie in Resources */ = {isa = PBXBuildFile; fileRef = A88814501D991CF5000D786B /* kxmovie */; };
+		A88814531D9921C0000D786B /* 50FPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88814521D9921C0000D786B /* 50FPSViewController.swift */; };
+		A88814621D992399000D786B /* KxAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A88814581D992399000D786B /* KxAudioManager.m */; };
+		A88814631D992399000D786B /* kxmovie.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A888145B1D992399000D786B /* kxmovie.bundle */; };
+		A88814641D992399000D786B /* KxMovieDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A888145D1D992399000D786B /* KxMovieDecoder.m */; };
+		A88814651D992399000D786B /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A888145F1D992399000D786B /* KxMovieGLView.m */; };
+		A88814661D992399000D786B /* KxMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A88814611D992399000D786B /* KxMovieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,6 +347,20 @@
 		56FE04521D4B4CE500760A37 /* duplex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = duplex.png; sourceTree = "<group>"; };
 		710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
 		9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88814501D991CF5000D786B /* kxmovie */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kxmovie; path = /Volumes/Documents/Document/Project/ThirdParty/other/ModifiedKxMovie/kxmovie; sourceTree = "<absolute>"; };
+		A88814521D9921C0000D786B /* 50FPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 50FPSViewController.swift; sourceTree = "<group>"; };
+		A88814561D992399000D786B /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		A88814571D992399000D786B /* KxAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxAudioManager.h; sourceTree = "<group>"; };
+		A88814581D992399000D786B /* KxAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxAudioManager.m; sourceTree = "<group>"; };
+		A88814591D992399000D786B /* KxLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxLogger.h; sourceTree = "<group>"; };
+		A888145A1D992399000D786B /* kxmovie-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kxmovie-Prefix.pch"; sourceTree = "<group>"; };
+		A888145B1D992399000D786B /* kxmovie.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kxmovie.bundle; sourceTree = "<group>"; };
+		A888145C1D992399000D786B /* KxMovieDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieDecoder.h; sourceTree = "<group>"; };
+		A888145D1D992399000D786B /* KxMovieDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieDecoder.m; sourceTree = "<group>"; };
+		A888145E1D992399000D786B /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
+		A888145F1D992399000D786B /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
+		A88814601D992399000D786B /* KxMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieViewController.h; sourceTree = "<group>"; };
+		A88814611D992399000D786B /* KxMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +514,7 @@
 		561E84281C4C848A00B62BCF /* SkyEye */ = {
 			isa = PBXGroup;
 			children = (
+				A88814551D992399000D786B /* kxmovie */,
 				56EA39551D2DF725008EF6FB /* TrailerView */,
 				56FAC28E1CDC897800F6D190 /* MicRecorder */,
 				56FA66BF1CB65CED0004DB32 /* FFMpegDecoder */,
@@ -669,6 +691,7 @@
 				563927FF1C92B47A00717A2A /* FileSetCameraTableViewController.m */,
 				563928001C92B47A00717A2A /* FileViewController.h */,
 				563928011C92B47A00717A2A /* FileViewController.m */,
+				A88814521D9921C0000D786B /* 50FPSViewController.swift */,
 			);
 			name = FileControllers;
 			sourceTree = "<group>";
@@ -763,6 +786,26 @@
 				04DA03A52CE2D3A3A9D51F01 /* Pods-SkyEye.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A88814551D992399000D786B /* kxmovie */ = {
+			isa = PBXGroup;
+			children = (
+				A88814561D992399000D786B /* AppConfig.h */,
+				A88814571D992399000D786B /* KxAudioManager.h */,
+				A88814581D992399000D786B /* KxAudioManager.m */,
+				A88814591D992399000D786B /* KxLogger.h */,
+				A888145A1D992399000D786B /* kxmovie-Prefix.pch */,
+				A888145B1D992399000D786B /* kxmovie.bundle */,
+				A888145C1D992399000D786B /* KxMovieDecoder.h */,
+				A888145D1D992399000D786B /* KxMovieDecoder.m */,
+				A888145E1D992399000D786B /* KxMovieGLView.h */,
+				A888145F1D992399000D786B /* KxMovieGLView.m */,
+				A88814601D992399000D786B /* KxMovieViewController.h */,
+				A88814611D992399000D786B /* KxMovieViewController.m */,
+			);
+			name = kxmovie;
+			path = ../../../ThirdParty/other/ModifiedKxMovie/kxmovie;
 			sourceTree = "<group>";
 		};
 		E2832C1EF2317BCD4B17F651 /* Frameworks */ = {
@@ -916,6 +959,7 @@
 				563927471C92AED200717A2A /* DVRRecordCommandPropertyList.plist in Resources */,
 				563927431C92AED200717A2A /* DVRInfoPropertyList.plist in Resources */,
 				563927AF1C92B2C500717A2A /* InfoPropertyList.plist in Resources */,
+				A88814511D991CF5000D786B /* kxmovie in Resources */,
 				563927491C92AED200717A2A /* DVRSystemCommandPropertyList.plist in Resources */,
 				563927AB1C92B2C500717A2A /* AudioCommandPropertyList.plist in Resources */,
 				563927461C92AED200717A2A /* DVRQRCodePropertyList.plist in Resources */,
@@ -937,6 +981,7 @@
 				561E84341C4C848A00B62BCF /* Main.storyboard in Resources */,
 				563927AE1C92B2C500717A2A /* FileNamePropertyList.plist in Resources */,
 				5697A6B71CEABC700087FD31 /* sine_wave_70s.aiff in Resources */,
+				A88814631D992399000D786B /* kxmovie.bundle in Resources */,
 				563927481C92AED200717A2A /* DVRSettingsPropertyList.plist in Resources */,
 				563927B11C92B2C500717A2A /* MulticastCommandPropertyList.plist in Resources */,
 				563927451C92AED200717A2A /* DVRMulticastCommandPropertyList.plist in Resources */,
@@ -1032,6 +1077,7 @@
 				5639280E1C92BB2600717A2A /* DVRQRCodeViewController.m in Sources */,
 				5639275F1C92B0BE00717A2A /* DVRSettingItemCellPrototype.m in Sources */,
 				5639275D1C92B0BE00717A2A /* DVRInfoItemCellPrototype.m in Sources */,
+				A88814621D992399000D786B /* KxAudioManager.m in Sources */,
 				563927F91C92B46D00717A2A /* QRCodeViewController.m in Sources */,
 				563927941C92B14B00717A2A /* DVRFileSetCameraTableViewController.m in Sources */,
 				56FA66C61CB65CED0004DB32 /* AudioStreamer.m in Sources */,
@@ -1043,6 +1089,7 @@
 				5639275B1C92B0BE00717A2A /* DVRFileCellPrototype.m in Sources */,
 				563927EB1C92B41500717A2A /* SkyEyeCommandGenerator.m in Sources */,
 				563927701C92B0CC00717A2A /* DVRSettingPool.m in Sources */,
+				A88814641D992399000D786B /* KxMovieDecoder.m in Sources */,
 				563927DE1C92B3CF00717A2A /* InfoPool.m in Sources */,
 				563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */,
 				563927CC1C92B37E00717A2A /* InfoItemCellPrototype.m in Sources */,
@@ -1060,6 +1107,7 @@
 				563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */,
 				563927BB1C92B33900717A2A /* PlayerManager.m in Sources */,
 				5639275E1C92B0BE00717A2A /* DVRSettingCatagoryCellPrototype.m in Sources */,
+				A88814661D992399000D786B /* KxMovieViewController.m in Sources */,
 				563927501C92B05200717A2A /* DVRSocketManager.m in Sources */,
 				563927E01C92B3CF00717A2A /* WiFiInfo.m in Sources */,
 				5639274F1C92B05200717A2A /* DVRPlayerManager.m in Sources */,
@@ -1070,6 +1118,8 @@
 				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
 				5639276F1C92B0CC00717A2A /* DVRInfoPool.m in Sources */,
 				563928091C92B48600717A2A /* LiveViewController.m in Sources */,
+				A88814651D992399000D786B /* KxMovieGLView.m in Sources */,
+				A88814531D9921C0000D786B /* 50FPSViewController.swift in Sources */,
 				5639278B1C92B14600717A2A /* DVRMultipleSettingTableViewController.m in Sources */,
 				56BAD7811C9F8F5A0082FBAF /* SelectCameraTableViewController.m in Sources */,
 				563927FB1C92B46D00717A2A /* SettingViewController.m in Sources */,
@@ -1222,6 +1272,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Volumes/Documents/Document/Project/ThirdParty/other/ModifiedKxMovie/kxmovie/kxmovie-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1260,6 +1313,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Volumes/Documents/Document/Project/ThirdParty/other/ModifiedKxMovie/kxmovie/kxmovie-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

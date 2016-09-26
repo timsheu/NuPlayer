@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D700A0963F7CD60E93D067F4E3D37DACE86B38FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "52C3056B323C2357402EF0DCACAA7FF55A8F4DD5" : 0,
+    "D700A0963F7CD60E93D067F4E3D37DACE86B38FB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3A916D09-ADD5-4081-AB15-7AEB621CB3C4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "52C3056B323C2357402EF0DCACAA7FF55A8F4DD5" : "..\/ThirdParty\/other\/ModifiedKxMovie",
+    "D700A0963F7CD60E93D067F4E3D37DACE86B38FB" : "NuPlayer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NuPlayer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NuPlayer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/timsheu\/ModifiedKxMovie.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "52C3056B323C2357402EF0DCACAA7FF55A8F4DD5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/timsheu\/NuPlayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D700A0963F7CD60E93D067F4E3D37DACE86B38FB"
+    }
+  ]
+}
